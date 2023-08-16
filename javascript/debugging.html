@@ -1,0 +1,32 @@
+<!-- 
+Debugging is the process of testing, finding, and reducing bugs (errors) in computer programs.
+
+The first known computer bug was a real bug (an insect) stuck in the electronics. 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Debugging</title>
+</head>
+<body>
+    <h1>My first web Page</h1>
+    <p id="demo"></p>
+    <script>
+        a=5;
+        b=6;
+        c=a+b;
+        // console.log(c);
+        document.getElementById("demo").innerHTML = c;
+        
+        // The debugger keyword stops the execution of JavaScript, and calls (if available) the debugging function.
+        let x = 15 * 5;
+        debugger;
+        document.getElementById("demo").innerHTML = x;
+    </script>
+</body>
+</html>

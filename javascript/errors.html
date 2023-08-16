@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors</title>
+</head>
+
+<body>
+    <!-- <p id="demo"></p> -->
+    <input type="text" id="demo">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p01"></p>
+    <script>
+        /* try...catch... */
+        // try {
+        //     adddlert("try block...");
+        // }
+        // catch (err) {
+            // JavaScript catches adddlert as an error, and executes the catch code to handle it.
+        //     document.getElementById("demo").innerHTML = err.message;
+        // }
+
+        function myFunction(){
+            const message = document.getElementById("p01");
+            message.innerHTML = "";
+            let x = document.getElementById("demo").value;
+            /* try...catch */
+            try{
+                /* Throw */
+                if(x=="") throw "empty";
+                if(isNaN(x)) throw "not a number";
+                x = Number(x);
+                if(x<5) throw "too low";
+                if(x>10) throw "too high";
+            }
+            catch(err){
+                message.innerHTML = "Input is " + err;
+            }
+            /* finally */
+            finally{
+                document.getElementById("demo").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

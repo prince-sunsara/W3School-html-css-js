@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Collections</title>
+    <style>
+        #div1,#div2{
+            display: inline-block;
+            border:2px solid red;
+            margin: 20px;
+            padding: 30px;
+            text-align: center;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <h2 id="h01">Team 7</h2>
+        <p id="p01">Hey, Kakashi here.</p>
+        <p id="p02">This is Naruto.</p>
+        <p id="p03">This is Sasuke.</p>
+        <p id="p04">This is Sakura.</p>
+    </div>
+
+    <div id="div2">
+        <h2 id="h02">Team 8</h2>
+        <p id="p05">Hey, Kurenai here.</p>
+        <p id="p06">This is Hinata.</p>
+        <p id="p07">This is Kiba.</p>
+        <p id="p08">This is Shino.</p>
+    </div>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+</body>
+    <script>
+        document.getElementById("demo1").innerHTML = "<b>Total p here is : </b>"+document.getElementsByTagName("p").length;
+
+        document.getElementById("demo2").innerHTML = "<b>Total h2 here is : </b>"+document.getElementsByTagName("h2").length;
+    </script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinator</title>
+    <style>
+        /* descendent selector --> select all elements that are descendants of a specified element. */
+        /* .descendent p{
+            color: aqua;
+        } */
+
+        /* child selector --> selects all elements that are the children of a specified element.*/
+        /* .child > p{
+            color: green;
+        } */
+
+        /* Adjacent Sibling Selector --> select an element that is directly after another specific element. */
+        div+h4{
+            background-color: rgb(110, 224, 224);
+        }
+
+        /* General Sibling Selector --> elects all elements that are next siblings of a specified element. */
+        div~p{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- descendent selector  -->
+    <!-- <div class="descendent">
+        <p>HI i am prince.</p>
+        <p>hi i am prince.</p>
+    </div> -->
+
+    <!-- child selector  -->
+    <!-- <div class="child">
+        <p>HI i am prince.</p>
+        <p>hi i am prince.</p>
+    </div> -->
+
+    <!-- Adjacent Sibling Selector  -->
+    <div>
+        <h4>hi i am prince.</h4>
+    </div>
+
+    <!-- General Sibling Selector -->
+    <div>
+        <p>HI i am prince.</p>
+    </div>
+</body>
+</html>

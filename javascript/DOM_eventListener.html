@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>DOM EventListener</title>
+        <style>
+            #first,#second,#third{
+                width:300px;
+                height:150px;
+                border:1px solid black;
+                background-color: tomato;
+                margin:10px;
+                text-align: center;
+                padding:10px 20px;
+            }   
+            #p1,#p2{
+                background-color: white;
+                color: black;
+                padding:10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="myBtn">Click</button>
+        <p id="demo"></p>
+
+
+        <!-- capturing and bubbling  -->
+        <div id="first">
+            <h2>Bubbling:</h2>
+            <p id="p1">Click here!</p>
+            <p><b>Inner most element's event is handled first and then the outer.</b></p>
+        </div>
+        <div id="second">
+            <h2>Capturing:</h2>
+            <p id="p2">Click here!</p>
+            <p><b>Outer most element's event is handled first and then the inner.</b></p>
+        </div>
+
+
+        <!-- removeEventListener() -->
+        <div id="third">
+            <p><b>removeEventListener</b></p>
+            <button id="rmBtn" onclick="eventHandler()">Remove</button>
+        </div>
+        <p id="ran"></p>
+    </body>
+    <script>
+        let btn = document.getElementById("myBtn");
+
+        // btn.addEventListener("click",display);
+        // btn.addEventListener("click",alertFun);
+        // function display() {
+        //     document.getElementById('demo').innerHTML = Date();
+        // }
+        // function alertFun() {
+        //     alert("This is alert for click");
+        // }
+
+
+        // btn.addEventListener("mouseover", fun1);
+        // btn.addEventListener("click", fun2);
+        // btn.addEventListener("mouseout", fun3);
+        // function fun1() {
+        //     document.getElementById("demo").innerHTML += "Mouse over!<br>";
+        // }
+        // function fun2() {
+        //     document.getElementById("demo").innerHTML += "Clicked!<br>";
+        // }
+        // function fun3() {
+        //     document.getElementById("demo").innerHTML += "Mouse out!<br>";
+        // }
+
+
+        // window.addEventListener("resize", 
+        //     function() {
+        //         document.getElementById("demo").innerHTML = Math.random();
+        // });
+
+
+        // let p1 = 7;
+        // let p2 = 5;
+        // btn.addEventListener("click",function(){
+        //     add(p1, p2);
+        // });
+        // function add(a, b) {
+        //     document.getElementById("demo").innerHTML = a * b;
+        // }
+
+
+        /* bubbling */
+        document.getElementById("p1").addEventListener("click", function() {
+            alert("you clicked white element.");
+        }, false);
+        document.getElementById("first").addEventListener("click", function() {
+            alert("you clicked orange element.");
+        }, false);
+
+        /* capturing */
+        document.getElementById("p2").addEventListener("click", function() {
+            alert("you clicked white element.");
+        }, true);
+        document.getElementById("second").addEventListener("click", function() {
+            alert("you clicked orange element.");
+        }, true);
+
+
+        /* addEventListener */
+        document.getElementById("third").addEventListener("mousemove", myFun);
+
+        function myFun() {
+            document.getElementById("ran").innerHTML = Math.random();
+        }
+        function eventHandler() {
+            document.getElementById("third").removeEventListener("mousemove",myFun);
+        }
+    </script>
+</html>

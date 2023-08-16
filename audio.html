@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio example</title>
+    <style>
+        button:hover,button:active{
+            background-color: rgb(97, 95, 95);
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body style="display: flex;justify-content: center;background-color: bisque;">
+    <!-- <audio controls autoplay>
+        <source src="/Get you the moon.mpeg" type="audio/ogg">
+        <source src="/Get you the moon.mpeg" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio> -->
+
+      <div style="width:33%;padding: 12px 0;text-align:center;background-color:cornsilk;border-radius: 7px;box-shadow:5px 10px darkgrey;">
+        <button style="cursor:pointer;border-radius: 4px;box-shadow:4px 5px darkgrey;" onclick="playPause()">Play/Pause</button>
+        <br><br>
+        <audio id="audio1" style="border-radius: 11px;width: 20vw;" controls>
+            <source src="/Get you the moon.mpeg" type="audio/ogg">
+            <source src="/Get you the moon.mpeg" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script>
+        let ma = document.getElementById("audio1");
+        function playPause(){
+            if(ma.paused)
+                ma.play();
+            else
+                ma.pause();
+        }
+    </script>
+</body>
+</html>

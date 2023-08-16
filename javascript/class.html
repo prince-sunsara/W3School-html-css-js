@@ -1,0 +1,79 @@
+<html>
+    <title>JS Class</title>
+    <body>
+        <p id="demo"></p>
+
+        <script>
+            class Person{
+                constructor(name,year){
+                    this.name = name;
+                    this.year = year;
+                }
+                name(){
+                    return this.name;
+                }
+                age() {
+                    let date = new Date();
+                    return date.getFullYear() - this.year;
+                }
+                // add parameter
+                // age(x) {
+                //     return x - this.year;
+                // }
+            }
+            class Prince extends Person{
+                constructor(name,year,city){
+                    super(name,year);
+                    this.city = city;
+                }
+                show() {
+                    return "Name is " + this.name + ", age is " + this.age() + ' and from ' + this.city;
+                }
+            }
+            const myDet = new Person("Prince", 2002);
+            document.getElementById("demo").innerHTML = "My name is <b>" + myDet.name + "</b> and My birth year is <b>" + myDet.year + "</b>.";
+            
+            document.getElementById("demo").innerHTML = "I am <b>" + myDet.age() + "</b>years old.";
+            
+            // add parameter
+            let date = new Date();
+            let year = date.getFullYear();
+            document.getElementById("demo").innerHTML = "I am <b>" + myDet.age(year) + "</b>years old.";
+
+            let myName = new Prince("Prince", 2002, "Patan");
+            document.getElementById("demo").innerHTML = myName.show();
+
+            /* Getter and Setter */
+            class car {
+                constructor(brand) {
+                    this.carName = brand;
+                }
+                get cname() {
+                    return this.carName;
+                }
+                set cname(name) {
+                    this.carName = name;
+                }
+            }
+            let myCar = new car("Ford");
+            myCar.cname = "BMW"; // Use a setter to change the carname to "BMW".
+            document.getElementById("demo").innerHTML = myCar.cname;
+            
+            /* class static */
+            class Car {
+                constructor(n) {
+                    this.name = n;
+                }
+                static hello() {
+                    return "hello!!";
+                }
+                // static hello(x) {
+                //     return "Name is " + x.name;
+                // }
+            }
+            let c = new Car("avm");
+            // document.getElementById("demo").innerHTML = c.hello(); // return nothing
+            document.getElementById("demo").innerHTML = Car.hello(c); // return 'Name is avm'
+        </script>
+    </body>
+</html>

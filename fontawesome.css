@@ -1,0 +1,63 @@
+/* Universal */
+*{
+    margin: 5px;
+    padding: 0;
+}
+
+/* body set up  */
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/* div set up  */
+.div1{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border:2px solid red;
+    border-radius: 5px;
+    width: 33%;
+    height: 20%;
+    position: absolute;
+    background-color: antiquewhite;
+}
+.div2{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border:2px solid red;
+    border-radius: 5px;
+    top: 22%;
+    width: 33%;
+    height: 20%;
+    position: absolute;
+    background-color: antiquewhite;
+}
+.div3{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border:2px solid red;
+    border-radius: 5px;
+    top: 44%;
+    width: 33%;
+    height: 20%;
+    position: absolute;
+    background-color: antiquewhite;    
+}
+/* icons set up  */
+i {
+    font-size: 1.1em;
+    padding: .75em;
+    border: 2px dashed gray;
+    border-radius: 50px;
+    background-color: bisque;
+}
+i:active,i:hover{
+    background-color: rgb(250, 204, 148);
+    color:rgb(106, 106, 252);
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base converting</title>
+</head>
+<body>
+    <script>
+        let x = 32;
+        console.log(x.toString(2));
+        console.log(x.toString(8));
+        console.log(x.toString(10));
+        console.log(x.toString(12));
+        console.log(x.toString(16));
+        console.log(x.toString(32));
+        console.log(x.toString(36));
+
+        let p = 123;
+        // do not create number objects
+        // The new keyword complicates the code and slows down execution speed.
+        let q = new Number(123);
+        console.log(p);
+        console.log(q);
+        // compare (true or false)
+        let l = (p==q);
+        console.log(l);
+        // Comparing two JavaScript objects always returns false.
+        let ll = (p===q);
+        console.log(ll);
+
+        // methods 
+        // toString()
+        let k = 123;
+        k.toString();
+        console.log(k);
+        console.log((100+23).toString());
+        
+        // toExponential()
+        let m = 9.656;
+        console.log(m.toExponential());
+        console.log(m.toExponential(2));
+        console.log(m.toExponential(4));
+        console.log(m.toExponential(6));
+
+        // toFixed()  -- toFixed(2) is perfect for working with money.
+        console.log(m.toFixed(2));
+        console.log(m.toFixed(4));
+        console.log(m.toFixed(6));
+
+        // toPrecision 
+        console.log(m.toPrecision(2));
+        console.log(m.toPrecision(4));
+        console.log(m.toPrecision(6));
+
+        // valueOf()
+        console.log(m.valueOf());
+
+        // Number()
+        console.log(Number(true));
+        console.log(Number("5"));
+        console.log(Number("5.3"));
+        console.log(Number("5,3"));
+        console.log(Number("5 3"));
+        console.log(Number("Prince"));
+        console.log(Number(new Date("1972-06-01")));
+
+        // parseInt()
+        console.log(parseInt("-10"));
+        console.log(parseInt("10"));
+        console.log(parseInt("-10.33"));
+        console.log(parseInt("10.33"));
+        console.log(parseInt("10 20 30"));
+        console.log(parseInt("10 years"));
+        console.log(parseInt("years 10"));
+
+        // parseFloat()
+        console.log(parseFloat("-10"));
+        console.log(parseFloat("10"));
+        console.log(parseFloat("-10.33"));
+        console.log(parseFloat("10.33"));
+        console.log(parseFloat("10 20 30"));
+        console.log(parseFloat("10 years"));
+        console.log(parseFloat("years 10"));
+
+        // Number Properties
+
+        // MAX_VALUE
+        let z = Number.MAX_VALUE;
+        console.log(z);
+
+        // MIN_VALUE
+        let zz = Number.MIN_VALUE;
+        console.log(zz);
+
+        // POSITIVE_INFINITY
+        let zzz = Number.POSITIVE_INFINITY;
+        console.log(zzz);
+
+        // NEGATIVE_INFINITY
+        let zzzz = Number.NEGATIVE_INFINITY;
+        console.log(zzzz);
+        
+        // NaN
+        let zzzzz = Number.NaN;
+        console.log(zzzzz);
+    </script>
+</body>
+</html>

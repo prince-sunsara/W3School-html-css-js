@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="one"></p>
+    <p id="two"></p>
+    <p id="three"></p>
+    <p id="four"></p>
+    <p id="five"></p>
+    <p id="five1"></p>
+    <p id="five2"></p>
+    <p id="five3"></p>
+    <p id="five4"></p>
+    <p id="five5"></p>
+    <button type="button" onclick="myFun()">click me!</button>
+    <script>
+        let x,y,z;
+        x=5;
+        y=5;
+        z=x+y;
+        // var are hoisted 
+        carName = "Swift";
+        var carName;
+        // const can not Reassign a constant value,Reassign a constant array,Reassign a constant object
+        const cars = ["You", "Sunsara", "from", "Patan"];
+        cars[0] = "prince";
+        // add an element 
+        cars.push("Gujrat");
+        // const object 
+        const car ={type:"fiat", model:"500", color:"white"};
+        car.color = "red";
+        car.owner = "prince";
+        // var hosting 
+        prince = "Sunsara";
+        var prince;
+        let text = "Good morning,";
+        text += " Have a nice day!";
+        // function 
+        let ram = ramfun(3,4);
+        function ramfun(p,q){
+            return p*q;
+        }
+        function myFun(){
+            document.getElementById("one").innerHTML = "3 + 5";
+            document.getElementById("two").innerHTML = "The answer is 8.";
+            document.getElementById("three").innerHTML = z;
+            document.getElementById("four").innerHTML = carName;
+            document.getElementById("five").innerHTML = cars;
+            document.getElementById("five1").innerHTML = "car owner is " + car.owner;
+            document.getElementById("five2").innerHTML = prince;
+            document.getElementById("five3").innerHTML = text;
+            document.getElementById("five4").innerHTML = typeof 3;
+            document.getElementById("five5").innerHTML = ram;
+        }
+    </script>
+</body>
+</html>

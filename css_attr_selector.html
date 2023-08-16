@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <style>
+        a[target]{
+            /* select element with a specified attribute.  */
+            color:red;
+        }
+        a[target="_parent"]{
+            /* select element with a specified attribute and value */
+            color: blueviolet;
+        }
+        [title~="remtest"]{
+            /* select element with an attribute value containing a specified word  */
+            color: brown;
+            font-weight: bolder;
+        }
+        [class|="my"]{
+            /* select element whose value is exactly the specified value, or the specified value followed by a hyphen(-)  */
+            background: yellow;
+        }
+        [class^="my"]{
+            /* select element whose value starts with a specified value  */
+            letter-spacing: 5px;
+        }
+        [class$="est"]{
+            /* select element whose value ends with a specified value  */
+            border: 2px solid red;
+        }
+        [title*="flo"]{
+            /* select element whose value contains a specified  value  */
+            background:aqua;   
+        }
+
+        /* styling table  */
+        input[type=text]{
+            display: block;
+            width: 150px;
+            margin-bottom: 10px;
+            background-color: yellow;
+            /* text-align: center; */
+        }
+        input[type="button"]{
+            display: block;
+            margin-left: 45px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" target="_blank">Prince</a>
+    <a href="#" target="_parent">Nareshbhai</a>
+    <a href="#">Sunasara</a>
+    <h2 class="mytest">Prince Sunasara</h2>
+    <h2 class="my-test">Prince Sunasara</h2>
+    <p class="test">I am prince sunasara who will became an good person in his life.</p>
+    <p title="remtest-flower">I will become hokage.</p>
+    <p title="remtest flower">I will become hokage.</p>
+
+    <div style="background-color:antiquewhite;">
+    <h2>Styling Forms</h2>
+    <form action="" name="input" method="get">
+        Firstname:<input type="text" name="Name" value="Prince" size="20">
+        Lastname:<input type="text" name="Name" value="Sunasara" size="20">
+        <input type="button" value="Click me">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<html>
+
+<head>
+    <title>My page Title.</title>
+    <link rel="icon" type="image/x-icon" href="/th-removebg-preview.png">
+    <style>
+        a:link {
+            color: gold;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: red;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: purple;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: overline;
+        }
+        table,th,td{
+            border: 1px solid black;
+            /* border: 1px solid black;
+            border-radius: 10px; */
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+            border-color: brown;
+        }
+        th,td{
+            background-color:blanchedalmond;
+            /* border: 1px solid black; */
+            /* border-radius: 10px; */
+            /* border-style: dotted; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- quotations -->
+
+    <p>here is a <q>quate from website:</q></p>
+    <blockquote cite="https://www.worldwildlife.org/who/index.html">
+        for 50 years,WWf has been protecting the future of the nature.
+    </blockquote>
+    <p> The <abbr title="World health organization">WHO</abbr> was founded in 1948.</p>
+    <address>
+        written by prince sunasara. <br>
+        visite us at : <br>
+        prince.com <br>
+        India
+    </address>
+    <p>the name <cite>Prince Sunasara</cite> is one of my favourite name.</p>
+    <bdo dir="rtl">madem</bdo> <br>
+
+    <!-- Links -->
+    <a href="https://facebook.com" target="_black">facebook</a><br>
+
+    <!-- Bookmarks -->
+    <p><a href="#ch2">Jump to ch2</a></p>
+    <p><a href="#ch4">Jump to ch4</a></p>
+    <h2>Chapter 1</h2>
+    <h2 id="ch2">Chapter 2</h2>
+    <h2>Chapter 3</h2>
+    <h2 id="ch4"> Chapter 4</h2>
+    <h2>Chapter 5</h2>
+    <h2>Chapter 6</h2>
+    <h2>Chapter 7</h2>
+    <h2>Chapter 8</h2>
+    <h2>Chapter 9</h2>
+    <br>
+
+
+    <!-- Image -->
+    <!-- <img src="https://th.bing.com/th/id/R.9f9aac0721e6730478340a3658fe737f?rik=7YYfvJo6uK4bcA&riu=http%3a%2f%2f1.bp.blogspot.com%2f-6aqFPtIgz28%2fTa1hl95wiRI%2fAAAAAAAAAYU%2fzgvutUK0_04%2fs1600%2fNaruto%2band%2bhinata-494748.jpeg&ehk=5SqmgqvHTPCSijTlwV8QXB2aFSvVeCxVJwH1%2bDH8LRg%3d&risl=&pid=ImgRaw&r=0"
+        alt="1" style="width: 500px; height: 400px; float: right;"> -->
+    <br>
+
+    <!-- Image map -->
+    <!-- <img src="https://th.bing.com/th/id/R.9f9aac0721e6730478340a3658fe737f?rik=7YYfvJo6uK4bcA&riu=http%3a%2f%2f1.bp.blogspot.com%2f-6aqFPtIgz28%2fTa1hl95wiRI%2fAAAAAAAAAYU%2fzgvutUK0_04%2fs1600%2fNaruto%2band%2bhinata-494748.jpeg&ehk=5SqmgqvHTPCSijTlwV8QXB2aFSvVeCxVJwH1%2bDH8LRg%3d&risl=&pid=ImgRaw&r=0" alt="Workplace" usemap="#workmap" > -->
+
+    <!-- <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="" onclick="myFunction()">
+    </map> -->
+    <br>
+
+    <!-- picture Element -->
+
+    <h2>The picture Element</h2>
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="img_food.jpg">
+        <source media="(min-width: 465px)" srcset="img_car.jpg">
+        <img src="img_th.jpg" style="width:auto;">
+    </picture>
+
+    <p>Resize the browser to see different versions of the picture loading at different viewport sizes.
+        The browser looks for the first source element where the media query matches the user's current viewport width,
+        and fetches the image specified in the srcset attribute.</p>
+
+    <p>The img element is required as the last child tag of the picture declaration block.
+        The img element is used to provide backward compatibility for browsers that do not support the picture element,
+        or if none of the source tags matched.
+    </p>
+
+    <p><strong>Note:</strong> The picture element is not supported in IE12 and earlier or Safari 9.0 and earlier.</p>
+    <br>
+
+    <table style="width: 100%;">
+        <tr>
+            <th style="width: 70%;">Name</th>
+            <th>Age</th>
+            <th>Roll No.</th>
+        </tr>
+        <tr>
+            <td style="height: 200px;">Prince</td>
+            <td>21</td>
+            <td>55</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>17</td>
+            <td>16</td>
+        </tr>
+    </table>
+    <br><br>
+    <!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Colgroup</h2>
+<p>Add the a colgroup with a col element that spans over two columns to define a style for the two columns:</p>
+
+<table style="width: 100%;">
+<colgroup>
+  <col span="2" style="background-color: #bcffff">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Multiple Col Elements</h2>
+<p>Add multiple col elements in the colgroup:</p>
+
+<table style="width: 40%;">
+  <colgroup>
+    <col span="2" style="background-color: #bcffff">
+    <col span="3" style="background-color: rgb(197, 154, 161)">
+  </colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Hide Columns</h2>
+<p>You can hide specific columns with the visibility property:</p>
+
+<table >
+<colgroup>
+    <col span="2">
+    <col span="3" style="visibility: collapse">
+  </colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+<p><b>Note:</b> The table columns does not collapse properly in Safari browsers.</p>
+</body>
+</html>
+
+    
+</body>
+
+<script>
+    function myFunction() {
+        alert("You clicked the link !")
+    }
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Examples</title>
+</head>
+<body>
+    <canvas id="myCanvas" height="100" width="200" style="border: 2px solid red;"></canvas>
+    <canvas id="myCanvas2" height="100" width="200" style="border: 2px solid red;"></canvas>
+
+    <p>Image to use:</p>
+    <img src="th.jpg" alt="The Scream" id="scream" width="220" height="277">
+    <p>Canvas to fill: </p>
+    <canvas id="myCanvas3" width="250" height="300" style="border: 2px solid red;">Your browser does not support HTML canvas tags.</canvas>
+    <p><button onclick="myCanvas()">Try it</button></p>
+    <script>
+        let c = document.getElementById("myCanvas");
+        let ctx = c.getContext("2d");
+
+        // // Line
+        // let ctx2 = c.getContext("2d");
+        // let ctx3 = c.getContext("2d");
+        // let ctx4 = c.getContext("2d");
+        // ctx.moveTo(0,0);
+        // ctx.lineTo(200,100);
+        // ctx2.moveTo(0,100);
+        // ctx2.lineTo(200,0);
+        // ctx3.moveTo(100,0);
+        // ctx3.lineTo(100,100);
+        // ctx4.moveTo(0,50);
+        // ctx4.lineTo(200,50);
+        // ctx2.stroke();
+
+        // // Circle
+        // let x = document.getElementById("myCanvas2");
+        // let cx = x.getContext("2d");
+        // cx.beginPath();
+        // cx.arc(95,50,40,0,2*Math.PI);
+        // cx.stroke();
+
+        // // Text
+        // ctx.font = "30px Arial";
+        // ctx.fillText("Hello World",20,50);
+        // // ctx.strokeText("Hello World", 10, 50);
+
+        // // Linear Gradient
+        // let grd = ctx.createLinearGradient(0,0,200,0);
+        // grd.addColorStop(0,"red");
+        // grd.addColorStop(1,"white");
+        // ctx.fillStyle = grd;
+        // ctx.fillRect(20,10,150,80);
+
+        // // Circular Gradient
+        // let grd = ctx.createRadialGradient(75,50,10,90,60,100);
+        // grd.addColorStop(0,"red");
+        // grd.addColorStop(1,"white");
+        // ctx.fillStyle = grd;
+        // ctx.fillRect(10,10,150,80);
+
+        // Image
+        function myCanvas() {
+            let p = document.getElementById("myCanvas3");
+            let px = p.getContext("2d");
+            let img = document.getElementById("scream");
+            px.drawImage(img,10,10);
+        }
+    </script>
+</body>
+</html>

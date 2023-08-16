@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        /* .flex-container{
+            display: flex;
+            flex-flow: row wrap;
+            background: deepskyblue;
+            justify-content: center;
+            justify-content: space-around;
+            align-items: stretch;
+            height: 600px;
+        } */
+        /* .flex-container > div{
+            height: 140px;
+            width: 60px;
+            margin: 10px;
+            padding: 10px;
+            background: #f2f2f2;
+            font-size: 14px;
+        } */
+
+        /* use for resopnsive  */
+        *{
+            box-sizing: border-box;
+        }
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .ls,.rs{
+            width: 50%;
+        }
+        .ls>div,.rs>div{
+            margin: 10px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        /* one way  */
+        /* @media screen and (max-width:600px) {
+            .flex-container{
+                flex-direction: column;
+            }
+        } */
+        /* another way  */
+        @media screen and (max-width:600px) {
+            .ls,.rs{
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <!-- for other properties use it  -->
+        <!-- <div>0</div> -->
+        <!-- <div>1</div> -->
+        <!-- <div style="order:1;flex-grow: 2;">2 <br>flax-grow 2 <br>order 1</div> -->
+        <!-- <div style="align-self: center;">3</div> -->
+        <!-- <div style="order:2;flex-grow: 1;">4 <br>flax-grow 1<br>order 2</div> -->
+        <!-- <div>5</div> -->
+        <!-- <div style="order:10;flex-grow: 4;">6 <br> flax-grow 4<br>order 4</div> -->
+        <!-- <div style="flex-shrink: 0;">7</div>         -->
+        <!-- flex: flex-grow flex-shrink flex-basis -->
+        <!-- <div style="flex:0 0 300px;">8</div> -->
+        <!-- <div>9</div> -->
+
+        <!-- for media queries use it -->
+        <div class="rs">
+            <div>0</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            </div>
+        <div class="ls">
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+</div>
+</body>
+</html>

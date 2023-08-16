@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <form action="" name="myForm" onsubmit="return validateForm()" method="post" style="border:1px solid red;padding:20px;">
+            <input type="text" name="fname">
+            <input type="submit" value="Submit">
+        </form>
+        
+        <form style="border:1px solid red;padding:20px;">
+            <!-- Automatic HTML Form Validation -->
+            <input type="text" name="fname" required>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div style="border:1px solid red;padding:20px;">
+            <input id="num">
+            <button type="submit" onclick="mySubmit()">Submit</button>
+            <p id="demo"></p>
+        </div>
+
+        <script>
+            function validateForm() {
+                let x = document.forms['myForm']['fname'].value;
+                if (x == "") {
+                    alert("Name is required.");
+                    return false;
+                }
+            }
+
+            function mySubmit() {
+                let x = document.getElementById('num').value;
+                let txt;
+                if (isNaN(x) || x < 1 || x > 10) {
+                    txt = "Wrong input.";
+                }
+                else {
+                    txt = "Input is OK.";
+                }
+                document.getElementById('demo').innerHTML = txt;
+            }
+        </script>
+    </body>
+</html>

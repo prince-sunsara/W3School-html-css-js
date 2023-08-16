@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Animation</title>
+    <style>
+        #container {
+            background-color: yellow;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            border: 2px solid green;
+        }
+        
+        #animate {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border: 1px solid blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+    <button type="button" onclick="myFun()">Run now!</button><br>
+</body>
+    <script>
+        function myFun() {
+            let position = 0;
+            let time = null;
+            const e = document.getElementById("animate");
+            clearInterval(time);
+            time = setInterval(run, 15);
+            function run() {
+                if (position == 250) {
+                    clearInterval(time);
+                }
+                else {
+                    position++;
+                    e.style.top = position + "px";
+                    e.style.left = position + "px";
+                }
+            }
+        }
+    </script>
+</html>

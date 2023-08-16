@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes</title>
+    <style>
+        /* :lang  */
+        /* q:lang(no){
+            quotes: "~" "~";
+        } */
+
+        /* Pseudo element  */
+         
+        /* ::first-line --> style first line. */
+        p::first-line{
+            background-color: aquamarine;
+        }
+
+        /* ::first-letter --> style first letter of text  */
+        p::first-letter{
+            color: red;
+            font-size: xx-large;
+        }
+
+        /* ::before --> used to insert  some contect before the content of an element  */
+        p::before{
+            content: url(th.jpg);
+        }
+
+        /* ::after --> used to add content after the content of an element  */
+        p::after{
+            content: url(sabo.jpg);
+        }
+
+        /* ::marker --> selects the markers of list items and style them  */
+        ::marker{
+            color: brown;
+            font-size: 20px;
+        }
+
+        /* ::selection --> matches the portion of an element that is selected by a user.  */
+        ::selection{
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- :lang  -->
+    <!-- <p>Hi ! i am <q>Prince</q> Sunasara.</p>
+    <p>Hi ! i am <q lang="no">Prince</q> Sunasara.</p> -->
+
+    <!--  pseudo element  -->
+    <div>
+        <p>I am prince. <br>My name is Prince sunasara.</p>
+        <p>My father is NareshBhai. <br>My father name is NareshBhai.</p>
+    </div>
+
+    <ol type="a">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>>
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+</body>
+</html>

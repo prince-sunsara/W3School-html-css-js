@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Counters</title>
+    <style>
+        /* css counters  */
+        /* body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: "Number " counter(section) ": ";
+        } */
+
+        /* Nesting Counters */
+        body{
+            counter-reset: section;
+        }
+        h1{
+            counter-reset: subsection;
+        }
+        h1::before{
+            content: "Section " counter(section) " : ";
+            counter-increment: section;
+        }
+        h3::before{
+            content: "Number " counter(section) "." counter(subsection) " : ";
+            counter-increment: subsection;
+        }
+
+        /* counters() function  */
+        ol{
+            counter-reset:n;
+            list-style-type: none;
+        }
+        li::before{
+            content: counters(n,".") " ";
+            counter-increment: n;
+        }
+    </style>
+</head>
+<body>
+    <!-- css counters  -->
+    <!-- <h1>CSS Counters</h1>
+    <h2>HTML</h2>
+    <h2>CSS</h2>
+    <h2>JAVASCRIPT</h2>
+    <h2>PHP</h2>
+    <h2>PYTHON</h2> -->
+
+    <!-- Nesting Counters  -->
+    <h1>Toppers</h1>
+    <h3>Dipesh</h3>
+    <h3>Diya</h3>
+    <h3>Khushi</h3>
+
+    <h1>Back Benchers</h1>
+    <h3>Prince</h3>
+    <h3>Priyansh</h3>
+    <h3>Raj</h3>
+
+    <h1>Models</h1>
+    <h3>Diya</h3>
+    <h3>Abhay</h3>
+    <h3>Shrushti</h3>
+
+    <!-- counters() function  -->
+    <ol>
+        <li>Prince</li>
+        <li>Abhay</li>
+        <li>Love Birds
+            <ol>
+                <li>Dipesh</li>
+                <li>Diya</li>
+            </ol>
+        </li>
+        <li>Family
+            <ol>
+                <li>Hardik</li>
+                <li>Khushi</li>
+                <li>Hardav</li>
+            </ol>
+        </li>
+        <li>Chool
+            <ol>
+                <li>Priyansh</li>
+                <li>Zoozoo</li>
+            </ol>
+        </li>
+        <li>Hemangi</li>
+        <li>Raj</li>
+    </ol>
+</body>
+</html>

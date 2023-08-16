@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <p id="demo1">The color is\white.</p>
+    <button type="button" onclick="mufun()">click</button>
+    <script>
+        function mufun(){
+            let x = "prince";
+            let y = new String("prince");
+            let text = "abcdefghi";
+            // let text = "abcd\befghi";
+            // let text = "abcd\fefghi";
+            // let text = "abcd\nefghi";
+            // let text = "abcd\refghi";
+            // let text = "abcd\tefghi";
+            // let text = "abcd\vefghi";
+
+            // String also declare like it 
+            // let text = new String("Prince");
+
+            let length = text.length;
+            document.getElementById("demo1").style.display = "inline-block";
+            document.getElementById("demo1").innerHTML = "length of the string is : " + text + " " + (x==y);
+            // document.getElementById("demo1").innerHTML = "length of the string is : " + length;
+            document.getElementById("demo1").style.color = "red";
+            document.getElementById("demo1").style.border = "1px solid green";
+        }
+        
+    </script>
+</body>
+</html>

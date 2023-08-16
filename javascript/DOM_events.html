@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>JavaScript DOM Events</title>
+</head>
+
+<body onload="checkCookie()">
+
+    <h2 onclick="this.innerHTML = 'By bro!' ">Hi girl!</h2>
+    <p onclick="changeText(this)">Here one boy sent a message to a girl.</p>
+
+    <button onclick="displayDate()">See Date here!</button>
+    <p id="demo"></p>
+
+    <button type="button" id="clickMe">click me!</button>
+
+    <p id="cookieCheck"></p>
+
+    <label for="name">Enter Name: </label>
+    <input type="text" name="name" id="fname" onchange="upperCase()" onfocus="myFocus(this)"><br><br>
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:red;width:120px;height:20px;padding:40px;text-align: center;">Mouse Over Me</div><br>
+
+    <div onmouseup="mUp(this)" onmousedown="mDown(this)" style="background-color:red;width:120px;height:20px;padding:40px;text-align: center;">Double click here</div>
+</body>
+    <script>
+        /* onfocus() */
+        function myFocus(x) {
+            x.style.backgroundColor = "yellow";
+        }
+        /* onclick() */
+        function changeText(text) {
+            text.innerHTML = "But the girl insulted a boy.";
+        }
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+        document.getElementById("clickMe").onclick = displayDate;
+
+        /* onload() */
+        function checkCookie() {
+            var txt = "";
+            if (navigator.cookieEnabled == true) {
+                txt = "Cookies are enabled.";
+            }
+            else {
+                txt = "Cookies are not enabled.";
+            }
+            document.getElementById("cookieCheck").innerHTML = txt;
+            // alert("This is alert.");
+        }
+
+        /* onchange() */
+        function upperCase() {
+            let x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+
+        /* onmouseover() and onmouseout() */
+        function mOver(obj) {
+            obj.innerHTML = "I Love you !!";
+        }
+        function mOut(obj) {
+            obj.innerHTML = "I Miss you !!";
+        }
+        
+        /* onmousedown(), onmouseup() and onclick() */
+        function mDown(obj) {
+            obj.style.backgroundColor = "yellow";
+            obj.innerHTML = "Release Me";
+        }
+        function mUp(obj) {
+            obj.style.backgroundColor = "red";
+            obj.innerHTML = "Thank You";
+        }
+    </script>
+</html>

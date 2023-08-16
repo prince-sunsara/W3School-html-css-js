@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JAVA</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        const cars = ["BMW","Volvo","Saab","Ford","Fiat","Audi"];
+        let text = "";
+        /* for loops */
+        // for (let i = 0; i < cars.length; i++) {
+        //     text += cars[i]+"<br>";
+        // }
+
+        /* for each */
+        // for(x of cars){
+        //     text += x + "<br>";
+        // }
+
+        /* for in */
+        // for(let a in cars){
+        //     text += cars[a] + ",";
+        // }
+
+        /* for of */
+        // for(let x of cars){
+        //     text += x + ",";
+        // }
+
+        /* while loop */
+        let i=0;
+        // while(i<10){
+        //     text += i;
+        //     i++;
+        // }
+
+        // do{
+        //     text +=i;
+        //     i++;
+        // }while(i<10);
+
+        // list:{
+        //     text += cars[0] + "<br>";
+        //     text += cars[1] + "<br>";
+        //     break list;
+        //     text += cars[2] + "<br>";
+        //     text += cars[3] + "<br>";
+        // }
+
+        const f = new Map([
+            ["apples",500],
+            ["bananas",300],
+            ["oranges",200]
+        ]);
+        for(const x of f){
+            text += x + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

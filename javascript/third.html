@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfun()">Click !</button>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button onclick="document.getElementById('demo3').innerHTML=Date()">Today's date</button>
+    <p id="demo3"></p>
+    <button onclick="this.innerHTML=Date()">Today's date</button><br><br>
+    <button onclick="dispalyDate()">DisplayDate</button>
+    <p id="demo4"></p>
+
+    <script>
+        // function 
+        function toCelsius(fahrenheit){
+            return (5/9) * (fahrenheit-32);
+        }
+        // objects 
+        // let car = {Name:"Volvo", Year:1990, owner:"Prince"};
+        // also write like it 
+        let car = {
+            Name:"Volvo",
+            Year:1990,
+            owner:"Prince",
+            surname:"Sunsara",
+            fullName: function(){
+                return this.owner + " " + this.surname;
+            } 
+        };
+        function myfun() {
+            // toCelsius() = return result , toCelsius = return function 
+            // document.getElementById("demo1").innerHTML = toCelsius(77);
+            document.getElementById("demo1").innerHTML = "The temprature is "+toCelsius(77)+" Celsius.";
+            // object 
+            document.getElementById("demo2").innerHTML = "The year of car is " + car.Year + " brought by " + car.fullName;
+        }
+        function dispalyDate(){
+            document.getElementById("demo4").innerHTML = Date();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        /* random */
+        // let r = Math.random();
+        let r = Math.floor(Math.random()*10);
+        document.getElementById('demo').innerHTML = r;
+        
+        /* bitwise */
+        // and(&)
+        let x = 5 & 1;
+        document.getElementById('demo').innerHTML = x;
+        
+        // or(|)
+        let xx = 5 | 1;
+        document.getElementById('demo').innerHTML = xx;
+        
+        // xor(^)
+        let xxx = 5 ^ 1;
+        document.getElementById('demo').innerHTML = xxx;
+        
+        // not(~)
+        let xxxx = ~5;
+        document.getElementById('demo').innerHTML = xxxx;
+
+        // right shift(>>)
+        let y = -5>>1;
+        document.getElementById('demo').innerHTML=y;
+        
+        // left shift(<<)
+        let yy = -5<<1;
+        document.getElementById('demo').innerHTML=yy;
+        
+        // zero fill right shift(>>>)
+        let yyy = -5>>>1;
+        document.getElementById('demo').innerHTML=yyy;
+        
+        // converting decimal to binary 
+        function d2b(dec){
+            return (dec >>> 0).toString(2);
+        }
+        document.getElementById('demo').innerHTML=d2b(-5);
+        
+        // converting decimal to binary 
+        function b2d(bin){
+            return parseInt(bin,2).toString(10);
+        }
+        document.getElementById('demo').innerHTML=b2d(101);
+        </script>
+</body>
+</html>

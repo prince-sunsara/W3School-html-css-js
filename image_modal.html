@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myImg{
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* modal which is open when user click the image  */
+        .modal{
+            display: none; /* initital none */
+            position: fixed;
+            z-index: 1; /* top place */
+            left: 0;
+            top: 0;
+            padding-top: 100px;
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color:rgba(0,0,0,0.9);
+        }
+        .modal-content{
+            /* margin: auto; */
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        #caption{
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        .modal-content, #caption{
+            animation-name:zoom;
+            animation-duration: 0.6s;
+        }
+        @keyframes zoom {
+            from{transform: scale(0.1);}
+            to{transform: scale(1);}
+        }
+
+        /* close button  */
+        .close{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor:pointer;
+        }
+        .close:hover, .close:focus{
+            color: #bbb;
+            text-decoration: none;
+            cursor:pointer;
+        }
+
+        /* responsible for smaller screen */
+        @media only screen and (max-width:700px){
+            .modal-content{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Modal</h1>
+    <img src="./sabo.jpg" alt="Boruto : Naruto the next generation" width="300" height="400" id="myImg">
+
+    <!-- The modal  -->
+    <div id="myModal" class="modal">
+        <!-- &times; = multiplication sign (x) use for close image  -->
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // get the moda 
+        let modal = document.getElementById('myModal')
+
+        // get the image and add it inside the modal and take alt as caption 
+        let img = document.getElementById('myImg');
+        let modalImg = document.getElementById('img01');
+        let captionText = document.getElementById('caption');
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // get the <span> that close the modal 
+        let span = document.getElementsByClassName('close')[0];
+
+        // close the modal when user click the <span> (X) 
+        span.onclick = function(){
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

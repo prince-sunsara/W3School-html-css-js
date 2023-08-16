@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar</title>
+    <style>
+        /* vertical navigation bar  */
+        /* ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: 90px;
+            border: 2px solid black;
+        }
+        li{
+            text-align: center;
+            border-bottom: 1px solid red;
+        }
+        li:last-child{
+            border-bottom: none;
+        }
+        li a{
+            display: block;
+            padding: 5px;
+            margin: 2px;
+            background-color: antiquewhite;
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: rgb(241, 190, 127);
+        }
+        li a:hover:not(.active){
+            background-color: aqua;
+        } */
+
+        /* fixed full height navigation bar  */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(249, 242, 232);
+        }
+
+        ul {
+            height: 100%;
+            width: 10%;
+            float: left;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(198, 192, 192);
+            position: fixed;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            text-decoration: none;
+            padding: 8px 16px;
+            color: black;
+        }
+
+        li a.active {
+            color: white;
+            background-color: #04aa6b;
+        }
+
+        li a:hover:not(active) {
+            color: white;
+            background-color: #555;
+        }
+
+        div {
+            height: 1000px;
+            margin-left: 10%;
+            padding: 1px 16px;
+            background-color: rgb(249, 242, 232);
+        }
+
+        img {
+            float: right;
+            width: 20%;
+            height: 20%;
+        }
+
+        .personal1,
+        .personal2 {
+            width: auto;
+            height: auto;
+            padding: 4px 1auto;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            border: 2px solid black;
+            background-color: rgb(242, 248, 209);
+            position: relative;
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .personal2 {
+            font-size: 1.075em;
+            width: 20vw;
+            margin-right: 12em;
+        }
+
+        .personal1 li:last-child,
+        .personal2 li:last-child {
+            border-bottom: none;
+        }
+
+        .personal1 li,
+        .personal2 li {
+            border-bottom: 1px solid black;
+        }
+
+        .personal1 li:hover,
+        .personal2 li:hover {
+            background-color: rgb(176, 250, 27);
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- vertical Navigation bar  -->
+    <!-- <ul>
+        <li><a class="active" href="#default.asp">Home</a></li>
+        <li><a href="#about.asp">About</a></li>
+        <li><a href="#news.asp">News</a></li>
+        <li><a href="#contact.asp">Contact</a></li>
+    </ul> -->
+
+    <!-- fixed full height navigation bar  -->
+    <ul>
+        <li><a class="active" href="http://127.0.0.1:5500/css_navbar.html" target="_blank">Home</a></li>
+        <li><a href="https://naruto.fandom.com/wiki/Naruto_Uzumaki" target="_blank">About</a></li>
+        <li><a href="https://www.cbr.com/tag/naruto/" target="_blank">News</a></li>
+        <li><a href="https://www.shutterstock.com/search/naruto" target="_blank">Images</a></li>
+    </ul>
+
+    <div>
+        <h3>Fixed full height navigation bar</h3>
+        <h1>Naruto Uzumaki</h1>
+
+        <img src="https://yt3.ggpht.com/a/AATXAJyCRoPxgSq5ToY1bNPg9SSsMxKKQl_k5MERYw=s900-c-k-c0xffffffff-no-rj-mo"
+            alt="">
+        <p><strong>Naruto Uzumaki</strong> is a sinobi of Konohagakure's <strong>Uzumaki clan</strong>. He became the
+            <strong>jinchuriki of the Nine-tails</strong> on the day of his birth - a fate that caused him to be shunned
+            by the most of konoha throughout his childhood.
+        </p>
+        <p>After joining Team <strong>Kakashi</strong>, Naruto worked hard to gain the village's acknowledgement all the
+            while chasing his dream to became <strong>Hokage</strong>. In the following years, through many hardships
+            and ordeals, he became a capable ninja, regarded as a hero both by the villagers, and soon after, the rest
+            of the world, became known as the <strong>Hero of the Hidden leaf</strong>. He soon prooved to be one of the
+            main factors in winning the <i>Fourth Shinobi World war</i>, leading him to achieve his dream and becaome
+            the village's <strong>Seventh Hokage</strong>.</p>
+        <p>According to Jiraiya, Naruto strongly resembles his father:[48] he has yellow-blond, spiky hair and blue
+            eyes, while inheriting the shape of his mother's eyes and face.[49] His trademark characteristics are the
+            three whisker markings on his cheeks. During the Fourth Shinobi World War, Dan Katō initially mistook Naruto
+            for Nawaki due to their stark resemblance.[50] Naruto was rather short for his age during Part I,[51] though
+            he grew to be taller than Sakura in Part II.[52] Naruto originally wore green goggles on his forehead,
+            though he discards them upon becoming a genin.</p>
+        <p>In Part I, Naruto wore an orange and blue jacket with a white collar, a white swirl with a tassel on the left
+            side, and a red Uzumaki crest on the back. He also wore orange pants with a shuriken holster on his right
+            knee, blue sandals, and a blue forehead protector, given to him by Iruka after graduating from the Academy.
+            In Part II, Naruto wears a more form fitting outfit after wearing out his original one while training with
+            Jiraiya,[53] with a T-shirt or mesh armour underneath. While retaining the swirls and orange pants, the blue
+            pieces of his outfit changes to black: his forehead protector (which is now longer), sandals, and orange
+            jacket, the black colour showing more prominence than the blue did originally. During his battle with Pain,
+            Naruto briefly wore a short-sleeved red coat with a black flame pattern around the hem and carried a large
+            scroll on his back.</p>
+        <p>Naruto loses his right arm after the Fourth Shinobi World War, though it is later replaced by a fully
+            maneouverable prosthetic arm made of Hashirama Senju's cells, wrapped completely in bandages. In The Last:
+            Naruto the Movie, Naruto grew again to be one of the tallest of his graduating class, cut his hair short,
+            and wore a black elastic forehead protector. Over his pants and sandals, he wears a black uniform jacket
+            with an orange zipper and buttons on the waist and sleeves, which can be folded up at times. He has a red
+            armband with an Uzumaki crest on his left arm. After becoming Hokage, Naruto dons a garment similar to his
+            father's: a white cape that has a red flame pattern around the hem, is held together by a red rope, and has
+            the kanji for "Seventh Hokage" (七代目火影, Nanadaime Hokage) written vertically down the back. Underneath this,
+            he wears an orange sweatshirt with black stripes (reverse in the manga version of Boruto: Naruto Next
+            Generations), black pants and sandals. He occasionally wears the traditional Hokage headpiece, but has
+            stopped wearing a forehead protector.</p>
+        <h1 style="text-align:center;">About Naruto Uzumaki</h1>
+        <div style="display:flex;height:auto;">
+            <ul class="personal1">
+                <li>Birthdate : October 10</li>
+                <li>Sex : Male</li>
+                <li>Age : part 1 = 12-13 <br> &emsp;&ensp;&ensp; part 2 = 15-17</li>
+                <li>Height : 166 cm </li>
+                <li>Weight : 50.9 kg</li>
+                <li>Blood type : B</li>
+                <li>Blood type : B</li>
+                <li>Kekkei genkai : Lava,Magnet,Boil Release</li>
+                <li>Classification : Jinchuriki,Sage,Sensor Type</li>
+                <li>Tailed Beast : Kurama (forms)</li>
+                <li>Occupation : Hokage</li>
+                <li>Clan :Uzumaki Clan</li>
+            </ul>
+            <ul class="personal2">
+                <li style="color: blue;text-align: center;">Naruto's team in anime</li>
+                <li>Team Kakashi</li>
+                <li>Sasuke Recovery Team</li>
+                <li>Konoha 11</li>
+                <li>Bikōchū Search Team</li>
+                <li>Star Guard Team</li>
+                <li>Peddlers Escort Team </li>
+                <li>Kazekage Rescue Team</li>
+                <li>Team One </li>
+                <li>Eight Man Squad</li>
+                <li>Hanabi Rescue Team </li>
+                <li>Team Jiraya</li>
+            </ul>
+        </div>
+        <br>
+        <img src="https://tse4.explicit.bing.net/th?id=OIP.pnhx92mfRnpY577yg3ngTwHaEL&pid=Api&P=0&w=305&h=172" alt=""
+            style="float:left;margin-top: 15px;opacity: 0.6;">
+        <p>Naruto was born on the night of October 10th to Minato Namikaze (the Fourth Hokage) and Kushina Uzumaki (the
+            second jinchūriki of the Nine-Tails). He was named after Naruto Musasabi, the protagonist of Jiraiya's first
+            book, which made the Sannin his godfather.[14] The Third Hokage made special arrangements for Minato to
+            preserve Kushina's seal containing the Nine-Tails while she gave birth to Naruto in a remote location,
+            assisted by midwives and Anbu. A masked man, Tobi, tracked down their location, however, killed the midwives
+            and Anbu, and captured Naruto, forcing Minato to quickly rescue him and teleport him to a safe house.</p>
+        <p>With Minato gone, Tobi captured Kushina and released the Nine-Tails from her, using it to devastate
+            Konoha.[15] Minato saved Kushina and left Naruto in her care before he went to protect the village,[16]
+            eventually defeating Tobi and freeing the Nine-Tails from Tobi's control. Returning to Naruto and Kushina's
+            location, Minato realised the only way to stop the Nine-Tails was to seal it within Naruto, believing that
+            his son would someday need the fox's power to defeat Tobi when he returned.[17] Since the Nine-Tails' chakra
+            was too immense to be sealed into an infant, Minato sacrificed his soul to split the fox's chakra in half,
+            sealing the Yin half within himself and the Yang half within Naruto. After telling Naruto how much they
+            loved him, Minato and Kushina succumbed to their wounds from protecting their son from the Nine-Tails and
+            passed away.</p>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.ak5bjEqPi-PNEqydBMtgGgHaEL&pid=Api&P=0&w=327&h=184" alt=""
+            style="opacity: 0.6;">
+        <p>Orphaned, not having parents or anyone else to provide for him, Naruto received monthly income from the
+            village in order to afford daily necessities. Naruto grew up not knowing who his parents were, receiving
+            only his mother's surname, as Hiruzen wanted to protect Naruto from his father's enemies.[18] Minato's dying
+            wish that Naruto be regarded as a hero was honoured by the very few who could put aside their pain and
+            losses caused by the disaster, while the majority of Konoha, however having no knowledge of the
+            circumstances surrounding his birth, openly ostracised and resented Naruto for containing the beast that
+            devastated the village and took many lives; some even viewed Naruto as the Nine-Tails itself. Soon, the
+            Third Hokage forbade anyone from mentioning the Nine-Tails, hoping that the younger generation would not
+            blindly hate Naruto as their parents did.[19] However, Naruto's peers emulated their parents' hatred of him,
+            despite not knowing why. This social isolation caused Naruto to crave acknowledgement, which he would gain
+            by pulling pranks.</p>
+        <p>On the day of his enrolment in the Ninja Academy[20] - Naruto first met Hinata Hyūga, who was being picked on
+            by three bullies. Despite not knowing her, Naruto immediately came to her defence, but he was outnumbered
+            and knocked unconscious, and the bullies damaged his red scarf. When Naruto awoke, Hinata thanked him for
+            helping her and returned his scarf to him, but he let her keep it. He was unaware that the girl's growing
+            affection for him began at that moment.[21]</p>
+        <p>In the Academy, Naruto became a student of Iruka Umino, who acted as a surrogate older brother to keep him in
+            line and help him work harder. Naruto also met his classmate Sasuke Uchiha and tried to befriend him, since
+            Sasuke was alone as well. Jealous of Sasuke's skills and popularity, however,[22] he developed a one-sided
+            rivalry in his pursuit to prove himself just as good as, if not better than, Sasuke, wishing that someday,
+            Sasuke would accept him as an equal.[23] Naruto also grew close with the owner of Ramen Ichiraku, Teuchi and
+            his daughter Ayame, being welcomed as their favourite customer.</p>
+        <footer
+            style="color: white;background-color: black;height:2em;display: flex;align-items: center;justify-content: center;">
+            <p>Thank you for comming here. <i>Copyright @PrinceSunasara</i></p>
+        </footer>
+    </div>
+
+</body>
+</html>

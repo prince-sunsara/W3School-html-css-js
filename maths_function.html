@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        /* calc() function  */
+        #div1{
+            position: absolute;
+            left: 50px;
+            width: calc(100% - 100px);
+            padding: 5px;
+            background-color: yellow;
+            border: 1px solid black;
+            text-align: left;
+        }
+        /* max() function  */
+        .div2{
+            margin-top: 4%;
+        }
+        #div2{
+            margin-top: 1%;
+            position: absolute;
+            background-color: yellow;
+            height: 100px;
+            width: max(50%,300px);
+        }
+        /* min() function  */
+        .div3{
+            margin-top: 10%;
+        }
+        #div3{
+            margin-top: 2%;
+            position: absolute;
+            background-color: yellow;
+            height: 100px;
+            width: min(50%,300px);
+        }
+    </style>
+</head>
+<body>
+    <h2 class="div1">The calc() Function</h2>
+    <div id="div1">Some text...</div>
+
+    <h2 class="div2">The max() Function</h2>
+    <div id="div2">Some text...</div>
+    
+    <h2 class="div3">The min() Function</h2>
+    <div id="div3">Some text...</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>This is my first javascript program</h2>
+    <p id="demo">Hello friends !</p>
+    <p id="intro"></p>
+    <button type="button" onclick="fun()">Click me!</button>
+    <script>
+        // one statement and many variables 
+        let person = "Prince Sunsara", resident = "from Patan."; 
+
+        // If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.
+        let x = "2"+3+4;
+        // if you put double quotation in last digit it will take first two as variable than sum it and last as string 
+        let y = 3+4+"2";
+        function fun(){
+            document.getElementById("demo").innerHTML = "Thank you!"
+            document.getElementById("intro").innerHTML = person + " " + resident + "<br>" + x + "<br>" + y;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos on HTML</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: bisque;
+            font-family: 'Fredoka', sans-serif;
+        }
+        button{
+            font-family: 'Baloo Bhai 2', cursive;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align:center">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+        <br><br>
+        <video id="video1" width="420" style="border-radius: 11px;">
+            <source src="/Main Roya.mp4" type="video/mp4">
+            <source src="/Main Roya.mp4" type="video/ogg">
+            Your browser does not support HTML video.
+        </video>
+    </div>
+
+    <script>
+        let mv = document.getElementById("video1");
+
+        function playPause() {
+            if (mv.paused)
+                mv.play();
+            else
+                mv.pause();
+        }
+
+        function makeBig() {
+            mv.width = 560;
+        }
+
+        function makeSmall() {
+            mv.width = 320;
+        }
+
+        function makeNormal() {
+            mv.width = 420;
+        } 
+    </script>
+
+    <p>Video courtesy of <a href="https://youtu.be/7Z5E-PcWb18" target="_blank">YouTube Video Songs</a>.</p>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos on HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: bisque;
+        }
+
+        #primaryDiv {
+            text-align: center;
+            padding-top: 2vw;
+        }
+
+        .video1 {
+            border-radius: 20px;
+        }
+
+        .videoNo {
+            display: flex;
+        }
+
+        button {
+            background-color: darkgray;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover,
+        button:active {
+            background-color: rgb(97, 95, 95);
+            color: aquamarine;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5vh;
+            background-color: black;
+            color: white;
+            width: auto;
+        }
+
+        a {
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="primaryDiv">
+        <div class="videoNo">
+            <div>
+                <button class="play1">Play/Pause</button>
+                <button onclick="mkSmall()">Small</button>
+                <button onclick="mkBig()">Big</button>
+                <button onclick="mkNormal()">Normal</button><br><br>
+
+                <video class="video1" style="margin: 5px;padding:12px;" width="420" controls>
+                    <source src="/Main Roya.mp4" type="video/mp4">
+                    <source src="/Main Roya.mp4" type="video/ogg">
+                    Can not Supported by your browser.
+                </video>
+            </div>
+            <div>
+                <button class="play2">Play/Pause</button>
+                <button onclick="mkSmall()">Small</button>
+                <button onclick="mkBig()">Big</button>
+                <button onclick="mkNormal()">Normal</button><br><br>
+
+                <video class="video2" style="margin: 5px;padding:12px;" width="420" controls>
+                    <source src="/Main Roya.mp4" type="video/mp4">
+                    <source src="/Main Roya.mp4" type="video/ogg">
+                    Can not Supported by your browser.
+                </video>
+            </div>
+            <div>
+                <button class="play3">Play/Pause</button>
+                <button onclick="mkSmall()">Small</button>
+                <button onclick="mkBig()">Big</button>
+                <button onclick="mkNormal()">Normal</button><br><br>
+
+                <video class="video3" style="margin: 5px;padding:12px;" width="420" controls>
+                    <source src="/Main Roya.mp4" type="video/mp4">
+                    <source src="/Main Roya.mp4" type="video/ogg">
+                    Can not Supported by your browser.
+                </video>
+            </div>
+        </div>
+    </div>
+    <script>
+        let mv1 = document.querySelector(".video1");
+        let mv2 = document.querySelector(".video2");
+        let mv3 = document.querySelector(".video3");
+        let btn1 = document.querySelector(".play1");
+        let btn2 = document.querySelector(".play2");
+        let btn3 = document.querySelector(".play3");
+
+        // btn1.addEventListener("click", () => {
+        //     if (mv1.paused)
+        //         mv1.play();
+        //     else
+        //         mv1.pause();
+        // })
+
+        // btn2.addEventListener("click", () => {
+        //     if (mv2.paused)
+        //         mv2.play();
+        //     else
+        //         mv2.pause();
+        // })
+
+        btn1.addEventListener("click", () => {
+            function playPause() {
+                if (mv1.paused)
+                    mv1.play();
+                else
+                    mv1.pause();
+            }
+            function mkSmall() {
+                mv1.width = 360;
+            }
+            function mkBig() {
+                mv1.width = 520;
+            }
+            function mkNormal() {
+                mv1.width = 420;
+            }
+        })
+        btn2.addEventListener("click", () => {
+            function playPause() {
+                if (mv2.paused)
+                    mv2.play();
+                else
+                    mv2.pause();
+            }
+            function mkSmall() {
+                mv2.width = 360;
+            }
+            function mkBig() {
+                mv2.width = 520;
+            }
+            function mkNormal() {
+                mv2.width = 420;
+            }
+        })
+        btn3.addEventListener("click", () => {
+            function playPause() {
+                if (mv3.paused)
+                    mv3.play();
+                else
+                    mv3.pause();
+            }
+            function mkSmall() {
+                mv.width = 360;
+            }
+            function mkBig() {
+                mv.width = 520;
+            }
+            function mkNormal() {
+                mv.width = 420;
+            }
+        })
+
+
+
+
+
+    </script>
+    <footer>
+        <p>video taken from <a href="https://youtu.be/7Z5E-PcWb18" target="_blank">YouTube Songs</a>.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <style>
+        #demo{
+            padding: 10px;
+            color:red;
+            border: 1px dashed green;
+        }
+        button{
+            padding: 5px 20px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: rgb(160, 158, 158);
+        }
+    </style>    
+
+    <p id="demo">Prince Sunsara</p><br>
+
+    <!-- using Events  -->
+    <button type="button" onclick="document.getElementById('demo').style.border = '1px solid red' ">Click</button>
+
+    <p id="demo2">My name is Prince Sunsara from Patan.</p>
+    <button type="button" onclick="document.getElementById('demo2').style.visibility = 'hidden' ">Hide Text</button>
+    <button type="button" onclick="document.getElementById('demo2').style.visibility = 'visible' ">Show Text</button>
+
+    <script>
+        document.getElementById("demo").style.color = "red";
+        document.getElementById("demo").style.display = "inline-block";
+    </script>
+</html>

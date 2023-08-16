@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* table,td,th{
+            border: 1px solid;
+        } */
+        /* table color  */
+        th {
+            color: white;
+            background-color: green;
+        }
+
+        /* border collapse  */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            caption-side: bottom;
+        }
+
+        /* horizontal dividers  */
+        td,tr {
+            border-bottom: 1px solid rgb(194, 192, 192);
+        }
+
+        td {
+            height: 30px;
+        }
+
+        th {
+            height: 60px;
+        }
+
+        /* alignment  */
+        tr {
+            text-align: center;
+            vertical-align: bottom;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e0e0e4;
+        }
+
+        /* hoverable table  */
+        tr:hover {
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="overflow-x:auto;">
+        <table>
+            <caption style="font-size:1.5em;margin-top:10px;border: 1.4px solid gray;">Table 1.1 Customers</caption>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>Adam</td>
+                <td>Johnson</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

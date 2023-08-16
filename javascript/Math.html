@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <input id="age" value="18">
+    <button onclick="mufun()">Try it</button>
+
+    <script>
+        // constant properties of Math 
+        document.getElementById("demo").innerHTML =
+            "Math.E  : " + Math.E + "<br>" +
+            "Math.PI  : " + Math.PI + "<br>" +
+            "Math.LN2  : " + Math.LN2 + "<br>" +
+            "Math.LN10  : " + Math.LN10 + "<br>" +
+            "Math.LOG2E  : " + Math.LOG2E + "<br>" +
+            "Math.LOG10E  : " + Math.LOG10E + "<br>" +
+            "Math.SQRT2  : " + Math.SQRT2 + "<br>" +
+            "Math.SQRT1_2  : " + Math.SQRT1_2;
+
+        // MATH METHODS
+
+        // ROUND() noraml conversion as per human do
+        console.log(Math.round(1.2));
+        console.log(Math.round(0.2));
+        console.log(Math.round(-3.5));
+
+        // CEIL() --> next int number
+        console.log(Math.ceil(9.2));
+        console.log(Math.ceil(-3.2));
+        console.log(Math.ceil(11.5));
+
+        // FLOOR() --> previous int number
+        console.log(Math.floor(-18.2));
+        console.log(Math.floor(111.8));
+        console.log(Math.floor(23.5));
+
+        // TRUNC() --> returns integer part of that number
+        console.log(Math.trunc(112.6));
+        console.log(Math.trunc(45.5));
+        console.log(Math.trunc(-16.3));
+
+        // sign() --> returns if x is negative, null or positive
+        console.log(Math.sign(4));
+        console.log(Math.sign(0));
+        console.log(Math.sign(-4));
+
+        // pow() --> power
+        console.log(Math.pow(5, 2));
+
+        // squrt() --> square root
+        console.log(Math.sqrt(25));
+
+        // abs() --> absolute(positive) value
+        console.log(Math.abs(-5));
+
+        // sin() and cos() --> return sin and cos value respectively 
+        console.log(Math.sin(0)); // answer 0
+        console.log(Math.cos(0)); // answer 1
+
+        // random() --> any random number between 0 and 1
+        console.log(Math.random());
+
+        // log() --> normal log
+        console.log(Math.log(1));
+        console.log(Math.log(2));
+
+        // log2() --> base 2 log
+        console.log(Math.log2(1));
+        console.log(Math.log2(8));
+
+        // log10() --> base 10 log
+        console.log(Math.log10(10000));
+        console.log(Math.log10(10));
+
+        // comparision 
+        // function mufun(){
+        //     let age = document.getElementById("age").value;
+        //     let vote = (age<18) ? "Too young " : "Old enough ";
+        //     document.getElementById("demo").innerHTML = vote + "to vote.";          
+        // }
+
+        // if else
+        function mufun() {
+            let age = Number(document.getElementById("age").value);
+            let vote;
+            if (isNaN(age)) {
+                vote = "Wrong input."
+            }
+            else {
+                vote = (age < 18) ? "Too young " : "Old enough ";
+            }
+            document.getElementById("demo").innerHTML = vote + "to vote.";
+        }       
+    </script>
+</body>
+
+</html>

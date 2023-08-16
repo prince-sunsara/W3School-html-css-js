@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs in HTML</title>
+    <style>
+        body{
+            background-image: url('https://getwallpapers.com/wallpaper/full/9/1/9/833871-best-simple-desktop-wallpaper-1920x1080-download.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            color:purple;
+        }
+        a{
+            color: red;
+        }
+        button{
+            color:black;
+            background-color: rgb(88, 86, 86);
+        }
+    </style>
+</head>
+<body >
+    <p>Let check your location in latitude and longitude.</p>
+    <button style="background-color: rgb(193, 190, 190);border-radius: 3px;" onclick="getLocation()">Get Location</button>
+    <p id="ex"></p>
+    <p><small><strong>Note :</strong> This is location point so if you want to search this then <a href="https://www.gps-latitude-longitude.com/longitude-latitude-to-address"target="_black">click here</a></small></p>
+    <script>
+        let x = document.getElementById("ex");
+
+        // // for geolocal location
+        // function getLocation(){
+        //     if(navigator.geolocation){
+        //         navigator.geolocation.getCurrentPosition(showPosition);
+        //     }
+        //     else{
+        //         x.innerHTML = "GeoLocation is not supported in yout browser.";
+        //     }
+        // }
+        // function showPosition(position){
+        //     x.innerHTML = " Latitude: " + position.coords.latitude + "<br>Longitude : " +position.coords.longitude;
+        // }
+
+
+        // // for handling Errors and Rejections
+        // function getLocation(){
+        //     if(navigator.geolocation){
+        //         navigator.geolocation.getCurrentPosition(showPosition,showError);
+        //     }
+        //     else{
+        //         x.innerHTML = "geolocation is not supported by this browser.";
+        //     }
+        // }
+        // function showPosition(position){
+        //     x.innerHTML = "Latitude : "+position.coords.latitude+"<br>Longitude : "+position.coords.longitude;
+        // }
+        // function showError(error){
+        //     switch(error.code){
+        //         case error.PERMISSION_DENIED:
+        //             x.innerHTML = "User denied the request for Geolocation."
+        //             break;
+        //         case error.POSITION_UNAVAILABLE:
+        //             x.innerHTML = "Location information is unavailable."
+        //             break;
+        //         case error.TIMEOUT:
+        //             x.innerHTML = "The request to get user location timed out."
+        //             break;
+        //         case error.UNKNOWN_ERROR:
+        //             x.innerHTML = "An Unknown error occurred."
+        //             break;
+        //     }
+        // }
+
+
+        // // for Location-specific information
+        // function getLocation(){
+        //     if(navigator.geolocation){
+        //         navigator.geolocation.getCurrentPosition(showPosition);
+        //     }
+        //     else{
+        //         x.innerHTML = "GeoLocation is not supported in yout browser.";
+        //     }
+        // }
+        // function showPosition(position){
+        //     x.innerHTML = " Latitude: " + position.coords.latitude + "<br>Longitude : " +position.coords.longitude+"<br>accuracy : "+position.coords.accuracy+"<br>altitude accuracy : "+position.coords.altitudeAccuracy+"<br>heading : "+position.coords.heading+"<br>Speed : "+position.coords.speed+"<br>Timestamp : "+position.timestamp;
+        // }
+
+
+        // Geolocation Object-Other interesting Methods
+        
+        function getLocation() {
+            if(navigator.geolocation){
+                navigator.geolocation.watchPosition(showPosition);
+            }
+            else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = " Latitude: " + position.coords.latitude + "<br>Longitude : " +position.coords.longitude;
+        }
+    </script>
+</body>
+</html>

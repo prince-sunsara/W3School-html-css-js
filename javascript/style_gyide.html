@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide</title>
+</head>
+<body>
+    <input type="number" id="demo">
+    <button onclick="toCelsius()">Change Tempreture</button>
+    <p id="answer"></p>
+    <script>
+        // Functions
+        let x = document.getElementById("demo").value;
+        document.getElementById("answer").innerHTML = toCelsius(x);
+        function toCelsius(x) {
+            return (5 / 9) * (x - 32);
+        }
+
+        // loops
+        for (let i = 0; i < 5; i++) {
+            x =+ i;          
+        }
+
+        // conditionals 
+        if(time < 20) {
+            greeting = "Good day";
+        }
+        else {
+            greeting = "Good evening";
+        }
+
+        // Object
+        const person = {
+            firstName: "Prince",
+            lastName: "Sunsara",
+            age: 50,
+            eyeColor: "bule"
+        };
+
+        // line length < 80
+        document.getElementById("demo").innerHTML = 
+        "Hello Prince.";
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <style>
+        ul,ol{
+            background-color: rgb(253, 123, 188);
+            padding: 5px;
+        }
+        ul.a{
+            list-style-type: circle;
+        }
+        /* inside position */
+        ul.b li{
+            border: .5px solid black ;
+            list-style-type:square;
+            list-style-position: inside;
+        }
+        /* outside position  */
+        ol.d li{
+            border: .5px solid black;
+            list-style-type: lower-roman;
+            list-style-position: outside;
+        }
+        /* list as image  */
+        ul.e{
+            list-style-image: url('https://tse1.mm.bing.net/th?id=OIP.hJ-3ooXrSHiVzBGHePMamAAAAA&pid=Api&P=0&w=20&h=20');
+            background-color: darkgoldenrod;
+        }
+        li{
+            background-color:pink;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ul class="a">
+            <li>Prince</li>
+            <li>Sunasara</li>
+        </ul>
+        <ul class="b">
+            <li>Naresh</li>
+            <li>Solanki</li>
+        </ul>
+        <ol class="c">
+            <li>Prince</li>
+            <li>Sunasara</li>
+        </ol>
+        <ol class="d">
+            <li>Prince</li>
+            <li>Sunasara</li>
+        </ol>
+        <ul class="e">
+            <li>Prince</li>
+            <li>Sunasara</li>
+        </ul>
+    </div>
+</body>
+</html>

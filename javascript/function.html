@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JS</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <button type="button" id="btn" onclick="myFunction()">Count!</button>
+    <br><br>
+    <button id="clk">Click Me!</button>
+    <h2 id="demo2"></h2>
+    <script>
+        /* self-invoking (use parentheses around the function) */
+        (function () {
+            document.getElementById("demo").innerHTML = "Hello! I am self-invoking function.";
+        })();
+        
+        /* function can be used as values */
+        function myFun(a, b) {
+            // arguments.length returns number of arguments
+            // return arguments.length;
+            return a + b;
+        }
+        let x = myFun(4, 3) * 2;
+        document.getElementById("demo").innerHTML = x;
+        
+        /* functions are objects*/
+        document.getElementById("demo").innerHTML = typeof x;
+        document.getElementById("demo").innerHTML = myFun(4, 6);
+        let text = myFun.toString();
+        document.getElementById("demo").innerHTML = text; 
+        
+        /* Arrow function */ 
+        // const y = (a, b) => a * b;
+        const y = (a, b) => { return a + b };
+        document.getElementById("demo").innerHTML = y(10,20); 
+        
+        /* The Arguments Object */
+        // find max value
+        function findMax() {
+            let max = -Infinity;
+            for(let i = 0; i < arguments.length; i++) { 
+                if(arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        } 
+        document.getElementById("demo").innerHTML = findMax(1,52,86,85,62,8);
+
+        //  create a function to sum all input values:
+        function add() {
+            let sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        document.getElementById("demo").innerHTML = add(120,45,62,85,103,85);
+        
+        let z = () => { return this };
+        document.getElementById("demo").innerHTML = z();
+        
+        /* invoking a function as a method*/
+        const person = {
+            fname: "Prince",
+            lname: "Sunsara",
+            fullName: function () {
+                // return this.fname + " " + this.lname;
+                return this; // return [object Object]
+            }
+        }
+        document.getElementById("demo").innerHTML = person.fullName();
+        
+        /* invoking a function as a Function Constructor */
+        function ok(a, b) {
+            this.fname = a;
+            this.lname = b;
+        }
+        const name = new ok("Prince", "Sunsara");
+        document.getElementById("demo").innerHTML = name.fname;
+        // A constructor invocation creates a new object. The new object inherits the properties and methods from its constructor.
+
+        /* call() */
+        const p = {
+            fullName: function() {
+                return this.f + " " + this.l;
+            }
+        }
+        const p1 = {
+            f: "abc",
+            l: "def"
+        }
+        const p2 = {
+            f: "mno",
+            l: "pqr"
+        }
+        document.getElementById("demo").innerHTML = p.fullName.call(p1);
+        
+        /* call method with arguments */
+        const pk = {
+            fullName: function(city, country) {
+                return this.f + "," + this.l + "," + city + "," + country;
+            }
+        }
+        document.getElementById("demo").innerHTML = pk.fullName.call(p1, "Patan", "Gujrat");
+        
+        /* apply() */
+        document.getElementById("demo").innerHTML = p.fullName.apply(p1);
+        
+        /* apply() with arguments */
+        document.getElementById("demo").innerHTML = pk.fullName.apply(p1, ["Patan", "Gujrat"]);
+
+        /* bind() */
+        const xx = {
+            fname:"Naruto",
+            lname:"Uzumaki",
+            fullName: function() {
+                return this.fname + " " + this.lname;
+            },
+            display: function() {
+                let x = document.getElementById("demo");
+                x.innerHTML = this.fname + " " + this.lname;
+            }
+        }
+        const member = {
+            fname:"Sasuke",
+            lname:"Uchiha",
+        }
+        let fullName = xx.fullName.bind(member);
+        // document.getElementById("demo").innerHTML = fullName();
+        xx.display();
+        setTimeout(xx.display, 3000); // display after 3s but it display undefined
+
+        // use bind method to solve this problem 
+        let display = xx.display.bind(member);
+        setTimeout(display, 3000);
+
+        /* counter dilemma */
+        let counter = 0;
+        function addCounter() {
+            counter += 1;
+        }
+        // call 3 time and return 3
+        addCounter();
+        addCounter();
+        addCounter();
+        document.getElementById("demo").innerHTML = "The counter is : " + counter;
+        // Any code on the page can change the counter, without calling add().
+        // The counter should be local to the add() function, to prevent other code from changing it:
+        function addCounter() {
+            let counter = 0;
+            counter += 1;
+        }
+
+        // now javaScript Closures
+        const count = (function () {
+            let num = 0;
+            return function () {
+                num += 1;
+                return num;
+            }
+        })();
+
+        function myFunction(){
+            document.getElementById("demo").innerHTML = count();
+        }
+        // document.getElementById("btn").style.color = "red";
+        // document.getElementById("btn").style.backgroundColor = "lightgreen";
+        // document.getElementById("btn").style.border = "2px solid pink";
+        // document.getElementById("btn").style.padding = "20px 40px";
+        // document.getElementById("btn").style.fontSize = "20px";
+        // document.getElementById("btn").style.display = "flex";
+
+        var hello;
+        // hello = function() {
+        //     document.getElementById("demo2").innerHTML += this + "<br>";
+        // }
+        hello = () => {
+            document.getElementById("demo2").innerHTML += this + "<br>";
+        }
+        window.addEventListener("load", hello);
+        document.getElementById("clk").addEventListener("click", hello);
+</script>
+</body>
+</html>

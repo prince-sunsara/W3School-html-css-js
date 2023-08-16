@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Forms</title>
+    <style>
+        div{
+            border: 2px solid red;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            /* width: 33.3%; */
+        }
+        input[type=text],select{
+            width: 100%;
+            padding: 12px 14px;
+            margin: 8px 0;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius:5px;
+        }
+        input[type=text]:focus{
+            background-color: lightgray;
+        }
+        input[type=button]{
+            width: 20%;
+            margin:8px 0;
+            padding: 12px 14px;
+            border: none;
+            color: white;
+            background-color: #06a106;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: width 1s ease-in-out;
+        }
+        input[id="fname"]{
+            background-image: url('./Spotify_icon.png');
+            background-position: 6px 6px;
+            background-repeat: no-repeat;
+            background-size: 30px;
+            padding-left: 40px;
+            border: none;
+            border-bottom: 2px solid red;
+        }
+        input[type=button]:focus{
+            width: 100%;
+        }
+        input[type=button]:hover{
+            background-color: #0f670f;
+        }
+        textarea{
+            width: 100%;
+            margin: 8px 0;
+            padding: 10px;
+            height: 150px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            resize: none;
+            font-size: 14px;
+            background-color: #f8f8f8;
+            border-radius: 5px;
+        }
+        @media screen and (max-width:600px){
+            lable,input[type=text],input[type=button],select,textarea{
+                width: 100%;
+                margin-top: 0;
+                font-size: 10px;
+            }
+            input[id="fname"]{
+                background-size: 24px;
+            }
+        }
+        @media screen and (max-width:200px){
+            lable,input[type=text],input[type=button],select,textarea{
+                width: 100%;
+                margin-top: 0;
+                font-size: 6px;
+            }
+            input[id="fname"]{
+                background-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="" method="get">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Enter your first name...">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Enter your last name...">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="in">India</option>
+                <option value="ussr">Russia</option>
+                <option value="usa">America</option>
+                <option value="jpn">Japan</option>
+                <option value="uk">Britain</option>
+                <option value="au">Australia</option>
+                <option value="gr">Germany</option>
+                <option value="fr">France</option>
+                <option value="nz">New Zealand</option>
+                <option value="sw">Sweden</option>
+                <option value="sz">Switzerland</option>
+            </select>
+            <label for="textarea">Text area</label>
+            <textarea id="textarea">Some text...</textarea>
+            <input type="button" value="Submit">
+        </form>
+    </div>
+    
+</body>
+</html>

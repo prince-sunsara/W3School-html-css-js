@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Search Methods</title>
+</head>
+<p id="demo1"></p>
+<body>
+    <script>
+        let x = "I am Prince Sunsara and me Prince";
+        // let str = x.indexOf("Prince");
+        // let str = x.lastIndexOf("Prince");
+        // let str = x.search("Prince");
+        let str = x.search("me");
+        let text = "The rain in SPAIN stays mainly in the plain";
+        // let y = text.match(/ain/g); // only small apse 
+        let y = text.match(/ain/gi); // small and capital bnne apse 
+        // document.getElementById("demo1").innerHTML = y;
+        
+        // Expression Substitution 
+        let price = 10;
+        let VAT = 0.25;
+        let total = `total: ${(price * (1 + VAT)).toFixed(2)}`; //.toFixed(2) - 2 numbers after point.
+
+        let header = "Template Literals";
+        let tags = ["Prince", "Naresh", "Sunsara"];
+        let html = `<h2>${header}</h2><ul>`;
+            for ( const x of tags){
+                html += `<li>${x}</li>`;
+            }
+        html += `</ul>`;
+        document.getElementById("demo1").innerHTML = html;
+    </script>
+</body>
+</html>

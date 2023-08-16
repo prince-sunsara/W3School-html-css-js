@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+
+        /* overflow : visible (default value)  */
+        /* .container{
+            border: 2px solid red;
+            margin: 12px;
+            width: 250px;
+            height: 180px;
+            overflow: visible;
+            background-color: pink;
+        } */
+        
+        /* overflow : hidden  --> it clipped the content */
+        /* .container{
+            border: 2px solid red;
+            margin: 12px;
+            width: 250px;
+            height: 180px;
+            overflow: hidden;
+            background-color: pink;
+        }  */
+        
+        /* overflow : scroll --> overflow clipped and scrollbar is added for that. */
+        /* .container{
+            border: 2px solid red;
+            margin: 12px;
+            width: 250px;
+            height: 180px;
+            overflow: scroll;
+            background-color: pink;
+        }     */
+        
+        /* overflow : auto --> it only add scrollbar when is is necessary  */
+        .container{
+            border: 2px solid red;
+            margin: 12px;
+            width: 250px;
+            height: 180px;
+            overflow: auto;
+            background-color: pink;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        This is visible overflow.
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, magni accusantium. Dolor esse, vel, consequuntur veritatis, debitis atque neque explicabo laborum ex necessitatibus a dolorem asperiores temporibus iste fugit voluptatem id? Sint dignissimos et placeat? Atque quasi eius, ducimus nostrum minus aperiam culpa consectetur nihil ea iste porro ipsam suscipit maiores minima, neque vitae, accusamus incidunt nesciunt laudantium optio eveniet? Optio ratione a eos.</p>
+    </div>
+</body>
+</html>

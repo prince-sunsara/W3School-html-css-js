@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Nodes</title>
+</head>
+<body>
+    <div id="div1">
+        <h1 id="head1">Team 7</h1>
+        <h2 id="p1">😇Naruto Uzumaki😇</h2>
+        <h2 id="p2">😈Sasuke Uchiha😈</h2>
+        <h2 id="p3">😎Kakashi Hatake😎</h2>
+        <h2 id="p4">This</h2>
+    </div>
+
+    <script>
+        const p = document.createElement("h2"); // create paregraph p
+        const n = document.createTextNode("😑Sakura Haruno😑"); // create textNode n
+        p.appendChild(n); // append n to p
+
+        const element = document.getElementById("div1");
+        element.appendChild(p); // append p to div
+
+        /* insertBefore() */
+        const child = document.getElementById("p2");
+        element.insertBefore(p, child);
+
+        /* remove() */
+        const d = document.getElementById("head1");
+        d.remove();
+
+        /* removeChild() */
+        // element = div1 = parentChild
+        const p3 = document.getElementById("p3");
+        element.removeChild(p3);
+
+        /* replaceChild() */
+        // child = p2 = sasuke
+        // p = new created element = sakura
+        element.replaceChild(p, p4);
+    </script>
+</body>
+</html>

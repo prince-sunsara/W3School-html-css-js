@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <h1 id="p1">Prince</h1>
+    <h2 id="p2">Old heading</h2>
+    <div id="img-div" style="width:20%;">
+        <img src="https://i.pinimg.com/originals/75/b7/2d/75b72df2750a965ee44f076b94f233ec.jpg" style="width:100%;">
+    </div>
+    <script>
+        /* Changing HTML Content */
+        document.getElementById("p1").innerHTML = "New text!";
+        // another example with different style
+        let x = document.getElementById("p2");
+        x.innerHTML = "New Heading";
+
+
+        /* Changing the Value of an Attribute */
+        // function is only for time set
+        function changeImg() {
+            // you can only write this 
+            let i = document.getElementById("img-div");
+            i.getElementsByTagName("img")[0].src = "https://getwallpapers.com/wallpaper/full/d/d/e/1416817-free-sasuke-wallpaper-1080x1920.jpg";
+        }
+        setTimeout(changeImg, 2000);
+    </script>
+</body>
+
+</html>

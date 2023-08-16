@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterator in JS</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        /* Home Made Iterable */
+        // function myNum(){
+        //     let n = 0;
+        //     return {
+        //         next: function() {
+        //             n += 10;
+        //             return {value:n, done:false};
+        //         }
+        //     };
+        // }
+        // const n = myNum();
+        // n.next();
+        // n.next();
+        // n.next();
+        // document.getElementById("demo").innerHTML = n.next().value;
+        
+
+        /* Symbol.iterator. */
+        // myNum = {};
+        // myNum[Symbol.iterator] = function() {
+        //     let n = 0;
+        //     done = false;
+        //     return {
+        //         next () {
+        //             n += 10;
+        //             if (n == 100) {done = true}
+        //             return {
+        //                 value:n,
+        //                 done:done
+        //             };
+        //         }
+        //     };
+        // }
+        // let txt = "";
+        // for (const n of myNum) {
+        //     txt += n + "<br>"
+        // }
+        // document.getElementById("demo").innerHTML = txt;
+        
+        
+        /* The Symbol.iterator method is called automatically by for..of. */    
+        myNum = {};
+        myNum[Symbol.iterator] = function() {
+            let n = 0;
+            done = false;
+            return {
+                next () {
+                    n += 10;
+                    if (n == 100) {done = true}
+                    return {
+                        value:n,
+                        done:done
+                    };
+                }
+            };
+        }
+        let iterator = myNum[Symbol.iterator] ();
+        let txt = "";
+        while (true) {
+            const result = iterator.next();
+            if (result.done) break;
+            txt += result.value + "<br>";
+        }
+        document.getElementById("demo").innerHTML = txt;
+        </script>
+</body>
+</html>

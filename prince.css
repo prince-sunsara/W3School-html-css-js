@@ -1,0 +1,36 @@
+/* universal  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body styling  */
+body{
+    margin: 0;
+    background-color: beige;
+    /* position: relative; */
+}
+
+/* header styling  */
+.header{
+    background-color:rgb(223, 230, 230);
+    margin-top: 0;
+}
+
+/* navigation bar styling  */
+.navbar{
+    overflow: hidden;
+    background-color: gray;
+    list-style-type: none;
+}
+.navbar a {
+    align-items: center;
+    float: left;
+    display: block;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 8px 12px;
+}
+.navbar a:hover{
+    
+}

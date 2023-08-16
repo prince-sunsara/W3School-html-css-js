@@ -1,0 +1,204 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rough</title>
+    <style>
+        body {
+            background-color: rgb(255, 244, 231);
+        }
+    </style>
+</head>
+
+<body>
+    <p>hello Friends !</p>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">click for date</button>
+    <p id="demo"></p>
+    <p>The area of triangle is 1/2 * <var>b</var><var>h</var> , where <var>b</var> is base and <var>h</var> is height.
+    </p>
+    <article>
+        <h2>Google Chrome</h2>
+        <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web
+            browser today!</p>
+    </article>
+
+    <article>
+        <h2>Mozilla Firefox</h2>
+        <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular
+            web browser since January, 2018.</p>
+    </article>
+
+    <article>
+        <h2>Microsoft Edge</h2>
+        <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet
+            Explorer.</p>
+    </article>
+    <p>Hello Friends ! i am Prince Sunasara the black heart🖤 lover.</p>
+</body>
+
+</html>  -->
+
+<!--
+<html>
+<head>
+<style>
+.all-browsers {
+  margin: 0;
+  padding: 5px;
+  background-color: lightgray;
+}
+
+.all-browsers > h1, .browser {
+  margin: 10px;
+  padding: 5px;
+}
+
+.browser {
+  background: white;
+}
+
+.browser > h2, p {
+  margin: 4px;
+  font-size: 90%;
+}
+</style>
+</head>
+<body>
+
+<article class="all-browsers">
+  <h1>Most Popular Browsers</h1>
+  <article class="browser">
+    <h2>Google Chrome</h2>
+    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+  </article>
+  <article class="browser">
+    <h2>Mozilla Firefox</h2>
+    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+  </article>
+  <article class="browser">
+    <h2>Microsoft Edge</h2>
+    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+  </article>
+</article>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos on HTML</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: bisque;
+        }
+        #primaryDiv{
+            text-align: center;
+            padding-top: 2vw;
+        }
+        .video1 {
+            border-radius: 20px;
+        }
+
+        .videoNo {
+            display: flex;
+        }
+        button{
+            background-color: darkgray;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover,button:active{
+            background-color: rgb(97, 95, 95);
+            color: aquamarine;
+        }
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5vh;
+            background-color: black;
+            color: white;
+            width: auto;
+        }
+        a{
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div id="primaryDiv" >
+        <div class="videoNo">
+            <div>
+                <button onclick="playPause()">Play/Pause</button>
+                <button onclick="mkSmall()">Small</button>
+                <button onclick="mkBig()">Big</button>
+                <button onclick="mkNormal()">Normal</button><br><br>
+
+                <video class="video1" style="margin: 5px;padding:12px;" width="420" controls>
+                    <source src="/Main Roya.mp4" type="video/mp4">
+                    <source src="/Main Roya.mp4" type="video/ogg">
+                    Can not Supported by your browser.
+                </video>
+            </div>
+            <div>
+                <button onclick="playPause()">Play/Pause</button>
+                <button onclick="mkSmall()">Small</button>
+                <button onclick="mkBig()">Big</button>
+                <button onclick="mkNormal()">Normal</button><br><br>
+
+                <video class="video1" style="margin: 5px;padding:12px;" width="420" controls>
+                    <source src="/Main Roya.mp4" type="video/mp4">
+                    <source src="/Main Roya.mp4" type="video/ogg">
+                    Can not Supported by your browser.
+                </video>
+            </div>
+            <div>
+                <button onclick="playPause()">Play/Pause</button>
+                <button onclick="mkSmall()">Small</button>
+                <button onclick="mkBig()">Big</button>
+                <button onclick="mkNormal()">Normal</button><br><br>
+
+                <video class="video1" style="margin: 5px;padding:12px;" width="420" controls>
+                    <source src="/Main Roya.mp4" type="video/mp4">
+                    <source src="/Main Roya.mp4" type="video/ogg">
+                    Can not Supported by your browser.
+                </video>
+            </div>
+        </div>
+    </div>
+    <script>
+        let mv = document.getElementsByClassName("video1");
+        function playPause() {
+            if (mv.paused)
+                mv.play();
+            else
+                mv.pause();
+        }
+        function mkSmall() {
+            mv.width = 360;
+        }
+        function mkBig() {
+            mv.width = 520;
+        }
+        function mkNormal() {
+            mv.width = 420;
+        }
+    </script>
+    <footer ><p>video taken from <a href="https://youtu.be/7Z5E-PcWb18" target="_blank">YouTube Songs</a>.</p>
+    </footer>
+</body>
+</html>

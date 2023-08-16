@@ -1,0 +1,2 @@
+    <script src="https://kit.fontawesome.com/7dccbdd057.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('https://th.bing.com/th/id/R.d949f2378da03892b70a3912e0f1abaf?rik=d0lJjQ2tw%2bN2Og&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fr%2fg%2fT%2f5%2fr%2fq%2fgradient-bg-4.svg.hi.png&ehk=NrnzmY5%2bcuck%2bRGtumQJ%2frx41LlK4hkRXs9Uq87uNUA%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1');
+            /* background-repeat: repeat-x; */
+
+            background-repeat: no-repeat;
+            /* background-size:50%; */
+            background-size: cover;
+            background-position: top right;
+            background-attachment: scroll;
+        }
+
+        p.h1 {
+            font-style: italic;
+        }
+
+        #example1 {
+            border: 10px dotted black;
+            padding: 15px;
+            background: lightblue;
+
+            /* background-clip (default value:border-box)*/
+            background-clip: padding-box;
+
+            /* background-origin (default value:content-box)*/
+            /* background-origin: border-box; */
+            /* background-origin: content-box; */
+            background-origin: padding-box;
+        }
+
+        #example2 {
+            border: 2px solid black;
+            padding: 25px;
+            background: url('https://gifimage.net/wp-content/uploads/2017/08/tree-gif-2.gif'), url('https://wallpapertops.com/walldb/original/1/2/5/780170.jpg');
+            background-repeat: no-repeat;
+            background-size: contain, 100% 100%;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p><h1>hello there</h1></p>
+    <h1 style="background-color:rgb(255, 99, 71);">...</h1>
+    <h1 style="background-color:#ff6347;">...</h1>
+    <h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+    
+    <h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>  -->
+    <div id="example1">
+        <p>The background extends behind the border.</p>
+    </div>
+    <h2>background-size: contain, cover:</h2>
+    <div id="example2">
+        <h2>Hello World</h2>
+        <p>Here we have two background images. We specify the size of the first background image with "contain", and the
+            second background-image with "cover".</p>
+    </div>
+</body>
+
+</html>

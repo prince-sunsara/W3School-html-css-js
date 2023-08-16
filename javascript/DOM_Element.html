@@ -1,0 +1,47 @@
+<html>
+    <body>
+        
+        <p id="demo">Naruto Uzumaki</p>
+        <p class="uchiha">Sasuke Uchiha</p>
+        <p class="uchiha">Sarada Uchiha</p>
+        <p>Sakura Haruno</p>
+        <p class="hatake">Kakashi Hatake</p>
+
+        <h1 id="intro"></h1>
+
+        <form id="form1">
+            First Name: <input type="text" name="fname" value="Prince"><br>
+            Last Name: <input type="text" name="lname" value="Sunsara"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2 id="frm"></h2>
+    <script>
+        /* getElementById */
+        const e = document.getElementById("demo");
+        document.getElementById("intro").innerHTML ="The name is " + e.innerHTML;
+        
+        
+        /* getElementByTagName */
+        let p = document.getElementsByTagName("p");
+        document.getElementById("intro").innerHTML = p[2].innerHTML;
+        
+        
+        /* getElementByClassName */
+        let c = document.getElementsByClassName("uchiha")[1];
+        document.getElementById("intro").innerHTML = "The name is " + c.innerHTML;
+        
+        /* querySelectorAll */
+        const q = document.querySelectorAll("p.hatake");
+        document.getElementById("intro").innerHTML = "The name is " + q[0].innerHTML;
+        
+        /* Finding HTML Elements by HTML Object Collections */
+        let f = document.forms["form1"];
+        let txt = "";
+        for (let i=0; i<f.length; i++) {
+            txt += f.elements[i].value + "<br>";
+        }
+        document.getElementById("frm").innerHTML = txt;
+    </script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Images</title>
+    <style>
+        body{
+            /* margin: 0; */
+            /* padding: 0; */
+        }
+        /* img{
+            width: 25%;
+            padding: 5px; */
+            /* border-radius  */
+            /* border-radius: 20px; */
+            /* border-radius: 50%; */
+            /* border-radius: 4px; */
+
+            /* border: 1px solid #ddd; */
+            
+            /* responsive image  */
+            /* max-width: 100%; */
+            /* height: auto; */
+            
+            /* center an image  */
+            /* display: block;
+            margin-right: auto;
+            margin-left: auto;
+            opacity: 0.2;
+        } */
+        div.images{
+            /* responsive images  */
+            /* width: 40%;
+            padding: 12px 18px;
+            border: 1px solid #ddd;
+            background-color: aliceblue;
+            box-shadow: 0 7px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.4);
+            margin-bottom: 25px; */
+        }
+        /* div.container{
+            text-align: center;
+            font-size: 18px;
+            padding: 6px 12px;
+        } */
+        /* img:hover{
+            box-shadow: 0 0 2px 1px rgba(0,148,186,0.5);
+        } */
+        /* .images:hover{
+            box-shadow: 0 0 2px 1px rgba(0,148,186,0.5);
+        } */
+        .container{
+            position: relative;
+            width: 100%;
+        }
+        .text{
+            position: absolute;
+            font-size: 20px;
+            border: 2px solid red;
+            transform: translate(-40px, -30px);
+            top: 50%;
+            left:50%;
+        }
+        img{
+            /* opacity: 0.5; */
+            width: 100%;
+            height: auto;
+            filter: grayscale(10%);
+            filter: blur(5px);
+            filter: brightness(50%);
+            filter: drop-shadow(8px 8px 10px green);
+            filter:opacity(50%);
+            filter: sepia(100%);
+            filter: hue-rotate(180deg);
+            filter: saturate(7);
+            filter: invert(100%);
+            filter: contrast(180%);
+        }
+        /* img:hover{
+            transform: scaleX(-1);
+        } */
+    </style>
+</head>
+<body>
+    <!-- <img src="./sabo.jpg" alt="Boruto : Naruto the next generation"> -->
+
+    <!-- <a href="./sabo.jpg" target="_blank"><img src="./sabo.jpg" alt="Boruto : Naruto the next generation"></a> -->
+
+    <!-- <div class="images">
+        <img src="./tree.jpg" alt="tree" style="width:100%;">
+        <div class="container">Image</div>
+    </div>
+    <div class="images">
+        <img src="./tree.jpg" alt="tree" style="width:100%;">
+        <div class="container">Image</div>
+    </div> -->
+    <div class="container">
+        <img src="./sabo.jpg" alt="example" width="1000" height="300">
+        <div class="text">Centered div</div>
+    </div>
+</body>
+</html>

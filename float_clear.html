@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floats and Clears</title>
+    <style>
+        /* without clear  */
+        .div1{
+            border: 3px solid black;
+            width: 60px;
+            height: 50px;
+            float: left;
+            background-color: tomato;
+        }
+        .div2{
+            border: 3px solid black;
+            margin-bottom: 10px;
+            background-color: aqua;
+            height: 80px;
+        }
+
+        /* with clear  */
+        .div3{
+            float: left;
+            border: 3px solid black;
+            width: 60px;
+            height: 50px;
+            float: left;
+            background-color: tomato;
+        }
+        .div4{
+            border: 3px solid black;
+            clear: left;
+            background-color: aqua;
+            height: 80px;
+        }
+
+        /* clearfix hack  */
+        .clearfix{
+            border:3px solid red;
+            overflow: auto;
+            padding: 5px;
+        }
+        img{
+            float: right;
+            height: 16em;
+        }
+    </style>
+</head>
+<body>
+    <!-- clearfix hack -->
+    <h1>Clearfix hack</h1>
+    <div class="clearfix">
+        This is container used for clearfix hack.
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, natus. Tempora officiis aliquam aperiam ipsum hic at nihil ipsam quas doloremque corporis cum, est, iste nemo consequuntur quo nesciunt ipsa rem velit, laboriosam iusto odit quos! Totam quos dolores itaque repudiandae modi vitae voluptatibus harum hic eaque, consequatur vel sed impedit odit, at alias. Eum, blanditiis cumque! Aliquam illum ad ipsam molestiae ab veritatis doloremque eligendi repudiandae, iure sint magni eaque dolorum id cum nesciunt sequi atque voluptate culpa provident? Assumenda earum consectetur debitis labore delectus, qui adipisci voluptas iusto obcaecati? Assumenda, non necessitatibus fuga, neque sapiente numquam rerum repellendus nulla ad officia commodi ipsa, excepturi voluptate veniam voluptatibus suscipit obcaecati amet omnis. Cum eius illum, facere aspernatur nihil vel voluptates amet itaque architecto assumenda et natus odit laboriosam error, provident reiciendis! Inventore, quo consectetur accusamus eos optio, maxime delectus iusto sed nobis quos ullam doloribus illo? Ratione maiores minima impedit natus labore tenetur suscipit exercitationem enim. Voluptatum, sunt cupiditate a nostrum dolore illum delectus possimus reprehenderit nemo impedit! Deserunt labore excepturi voluptas, veritatis recusandae accusamus consequuntur quia saepe nemo!</p>
+        <img src="sabo.jpg" alt="">
+    </div>
+</body>
+</html>

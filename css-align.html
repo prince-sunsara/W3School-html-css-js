@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Align</title>
+    <style>
+        body{
+            background-color:aliceblue;
+        }
+        /* center align element  */
+        .centerE{
+            width:60%;
+            border: 2px solid black;
+            background-color:aqua;
+            padding:5px;
+            margin: auto;
+        }
+        /* center algin text  */
+        .centerT{
+            margin-top: 10px;
+            border: 2px solid black;
+            text-align: center;
+            background-color: aquamarine;
+        }
+
+        /* center an image  */
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            margin-top: 10px;
+        }
+
+        /* left-right alignment using position  */
+        .lrAp{
+            position: absolute;
+            right: 0;
+            padding: 10px;
+            background-color: aqua;
+            width: 40%;
+            margin-top: 10px;
+            border: 2px solid red;
+        }
+
+        /* left-right alignment using float  */
+        .lrAf{
+            float: left;
+            padding: 10px;
+            background-color: aqua;
+            width: 40%;
+            margin-top: 10px;
+            border: 2px solid red;
+            
+        }
+
+        /* center vertical using padding  */
+        .cVp{
+            border:2px solid rgb(170, 222, 135);
+            padding: 70px 0;
+            text-align: center;
+            width: 50%;
+            background-color: orange;
+        }
+        
+        /* center vertical using padding  */
+        .cVlh{
+            margin-top:10px ;
+            border:2px solid rgb(170, 222, 135);
+            background-color:antiquewhite;
+            text-align: center;
+            height: 200px;
+            line-height: 200px;
+            width: 50%;
+            /* margin-left: auto;
+            margin-right: auto; */
+        }
+        /* if there are multiple lines  */
+        .cVlh p{
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* center vertical using position & transform */
+        .cVpT{
+            height: 200px;
+            position: relative;
+            border: 2px solid rgb(170, 222, 135);
+            width: 50%;
+            margin-top: 10px;
+            /* float: right; */
+            background-color: green;
+        }
+        .cVpT p{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            text-align: center;
+        }
+
+        /* center vertical using flexbox  */
+        .cVf{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            border: 3px dashed black;
+            margin-top: 10px;
+            width: 50%;
+            background-color: rgb(119, 138, 82);
+        }
+        </style>
+</head>
+<body>
+    <!-- center align element  -->
+    <!-- <div class="centerE" >
+        <p>This div is centered.</p>
+    </div> -->
+
+    <!-- center algin text -->
+    <!-- <div class="centerT" >
+        <p>This div is centered.</p>
+    </div> -->
+
+    <!-- center an image  -->
+    <!-- <img src="sabo.jpg" alt=""> -->
+
+    <!-- left-right alignment using position -->
+    <!-- <div class="lrAp">
+        <h2>left-right alignment using position</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error facilis quisquam hic quidem quibusdam ipsam obcaecati asperiores iste? Omnis est qui debitis praesentium dolorum porro sit, neque aliquid laudantium quisquam alias quibusdam. Quo, consectetur.</p>
+    </div> -->
+
+    <!-- left-right alignment using float  -->
+    <!-- <div class="lrAf">
+        <h2>left-right alignment using float</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error facilis quisquam hic quidem quibusdam ipsam obcaecati asperiores iste? Omnis est qui debitis praesentium dolorum porro sit, neque aliquid laudantium quisquam alias quibusdam. Quo, consectetur.</p>
+    </div> -->
+
+    <!-- center vertical using padding  -->
+    <div class="cVp">
+        <p>hello, I am prince sunasara. I am student of the Computer Engineering and i'm in 5th semister. I use some social media account like <strong> instagram(Unknown_._4ever), facebook(Prince Sunasara), Whatsapp(7874292866)</strong> etc.</p>
+    </div>
+
+    <!-- center using line-height  -->
+    <div class="cVlh">
+        <p>
+            hello, I am prince sunasara. I am student of the Computer Engineering and i'm in 5th semister. I use some social media account like <strong> instagram(Unknown_._4ever), facebook(Prince Sunasara), Whatsapp(7874292866)</strong> etc.
+        </p>
+    </div>
+
+    <!-- center vertical using position & transform  -->
+    <div class="cVpT">
+        <p>
+            hello, I am prince sunasara. I am student of the Computer Engineering and i'm in 5th semister. I use some social media account like <strong> instagram(Unknown_._4ever), facebook(Prince Sunasara), Whatsapp (7874292866)</strong> etc.
+        </p>
+    </div>
+    
+    <!-- center vertical using flexbox  -->
+    <div class="cVf">
+        <p>
+            hello, I am prince sunasara. I am student of the Computer Engineering and i'm in 5th semister. I use some social media account like <strong> instagram(Unknown_._4ever), facebook(Prince Sunasara), Whatsapp (7874292866)</strong> etc.
+        </p>
+    </div>
+</body>
+</html> 

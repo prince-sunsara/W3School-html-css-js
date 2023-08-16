@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image sprites</title>
+    <style>
+        #navlist{
+            position: relative;
+        }
+        #navlist li{
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            list-style-type: none;
+        }
+        #navlist li, #navlist a{
+            height: 50px;
+            display: block;
+            list-style-type: none;
+            text-decoration: none;
+        }
+        
+        #spotify{
+            background: url('./Spotify_icon.png') 0 0;
+            background-size: 50px;
+            left:0px;
+            width: 50px;
+            /* background-color:brown; */
+        }
+        #gana{
+            background: url('https://th.bing.com/th/id/R.71b006da73772dd04090d78413cdd77d?rik=MRFYlhQe9M7kYg&riu=http%3a%2f%2flogowiki.net%2fwp-content%2fuploads%2fimgp%2fGANA-Logo-1-4089.png&ehk=fSYsy9RaQ9Hpsr%2bZnLCk035SICyH%2fvg%2f9Bvm0Hyr%2fAw%3d&risl=&pid=ImgRaw&r=0') -50px 0;
+            background-size: 50px 50px;
+            width: 50px;
+            left: 60px;
+            /* background-color: aquamarine; */
+        }
+        #hungama{
+            background: url('https://vignette.wikia.nocookie.net/logopedia/images/3/35/Hungama_TV.png/revision/latest?cb=20111015213235') -100px 0;
+            background-size: 50px 50px;
+            /* background-color:beige; */
+            width: 50px;
+            left: 120px;
+        }
+        #spotify:hover{
+            /*box-shadow: right, bottom, lightness(ketlu ptlu hse e), spread (felavo --> 4 baju felavu) */
+            box-shadow: 5px 5px 15px 0 greenyellow;   
+        }
+        #gana:hover{
+            box-shadow: 5px 5px 15px 0 red;   
+        }
+        #hungama:hover{
+            box-shadow: 5px 5px 15px 0 rgb(252, 66, 97);   
+        }
+    </style>
+</head>
+<body>
+    <ul id="navlist">
+        <li id="spotify"><a href="https://open.spotify.com/__noul__?pfhp=2c2ccb58-8a92-4713-a1c0-8b43b3090b49" target="_blank"></a></li>
+        <li id="gana"><a href="https://gaana.com/" target="_blank"></a></li>
+        <li id="hungama"><a href="https://www.hungama.com/" target="_blank"></a></li>
+    </ul>
+</body>
+</html>
+<!-- 
+Example explained:
+
+#navlist {position:relative;} - position is set to relative to allow absolute positioning inside it
+#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} - margin and padding are set to 0, list-style is removed, and all list items are absolute positioned
+#navlist li, #navlist a {height:44px;display:block;} - the height of all the images are 44px
+Now start to position and style for each specific part:
+
+#home {left:0px;width:46px;} - Positioned all the way to the left, and the width of the image is 46px
+#home {background:url(img_navsprites.gif) 0 0;} - Defines the background image and its position (left 0px, top 0px)
+#prev {left:63px;width:43px;} - Positioned 63px to the right (#home width 46px + some extra space between items), and the width is 43px.
+#prev {background:url('img_navsprites.gif') -47px 0;} - Defines the background image 47px to the right (#home width 46px + 1px line divider)
+#next {left:129px;width:43px;}- Positioned 129px to the right (start of #prev is 63px + #prev width 43px + extra space), and the width is 43px.
+#next {background:url('img_navsprites.gif') -91px 0;} - Defines the background image 91px to the right (#home width 46px + 1px line divider + #prev width 43px + 1px line divider ) -->

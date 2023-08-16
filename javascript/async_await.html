@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Async/Await</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        /* async syntax */
+        // function display(x) {
+        //     document.getElementById("demo").innerHTML = x;
+        // }
+        // async function myFun() {
+        //     return "Hello!";
+        // }
+        // myFun().then (
+        //     function(value) {
+        //         display(value);
+        //     }
+        // );
+
+        /* await syntax */
+        // async function displayer() {
+        //     let myPromise = new Promise(
+        //         function(resolve, reject) {
+        //             resolve("I love you!");
+        //     });
+        //     document.getElementById("demo").innerHTML = await myPromise;
+        // }
+        // displayer();
+        
+        /* await without reject */
+        async function displayer() {
+            let myPromise = new Promise(function(resolve) {
+                resolve("PRINCE SUNSARA");
+            });
+            document.getElementById("demo").innerHTML = await myPromise;
+        }
+        displayer();
+        
+        /* waiting for a setTimeout */
+        async function displayer() {
+            let myPromise = new Promise(function(resolve) {
+                setTimeout(function() {
+                    resolve("PRINCE SUNSARA")
+                }, 3000);
+            });
+            document.getElementById("demo").innerHTML = await myPromise;
+        }
+        displayer();
+
+        /* waiting for a File */
+        async function getFile() {
+            let myPromise = new Promise(function(resolve) {
+                    let req = new XMLHttpRequest();
+                    req.open('get', "async_mycar.html");
+                    req.onload = function() {
+                        if(req.status == 200) {
+                            resolve(req.response);
+                        }
+                        else {
+                            resolve("File not Found.");
+                        }
+                    };
+                    req.send();
+                });
+            document.getElementById("demo").innerHTML = await myPromise;
+        }
+        getFile();
+    </script>
+</body>
+</html>

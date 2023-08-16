@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode</title>
+</head>
+
+<body>
+    <h3>Keywords reserved for future JavaScript versions can NOT be used as variable names in strict mode.</h3>
+    <p>These are : <br>
+    <li>implements</li>
+    <li>interface</li>
+    <li>let</li>    
+    <li>package</li>    
+    <li>private</li>    
+    <li>protected</li>    
+    <li>public</li>           
+    <li>static</li>           
+    <li>yield</li> 
+    </p>
+
+    <!-- Strict mode is declared by adding "use strict"; to the beginning of a script or a function. -->
+    <script>
+        // Using a variable, without declaring it, is not allowed:
+        "use strict";
+        p = 3.14;  // p is not declare so give error
+
+        // Declared inside a function, it has local scope (only the code inside the function is in strict mode):
+        x = 3.14;       // This will not cause an error.
+        "use strict";
+        myFunction();
+        function myFunction() {
+            y = 3.14; // y is not declare so give error
+        }
+
+        // Using an object, without declaring it, is not allowed:
+        "use strict";
+        z = { p1: 10, p2: 20 }; // This will cause an error
+
+        // Deleting a variable (or object) is not allowed.
+        "use strict";
+        let k = 3.14;
+        delete k;  // This will cause an error
+
+        // Deleting a function is not allowed.
+        "use strict";
+        function q(p1, p1) { };
+        delete q;  // This will cause an error
+
+        // Duplicating a parameter name is not allowed:
+        "use strict";
+        function m(p1, p1) { };  // This will cause an error
+
+        // Octal numeric literals are not allowed:
+        "use strict";
+        let zz = 010;  // This will cause an error
+
+        // Octal escape characters are not allowed:
+        "use strict";
+        let x = "\010"; // This will cause an error
+
+        // writing to read-only property is not allowed:
+        "use strict";
+        const obj = {};
+        Object.defineProperty(obj, "x", { value: 0, writable: false });
+        obj.x = 3.14;  // this will cause an error
+
+        // Writing to a get-only property is not allowed:
+        "use strict";
+        const obj = { get x() { return 0 } };
+        obj.x = 3.14; // this will cause an error
+
+        // deleting an undeletable property is not allowed:
+        "use strict";
+        delete Object.prototype; // this will cause an error
+
+        // The word eval cannot be used as a variable:
+        "use strict";
+        let eval = 3.14;         // This will cause an error
+
+
+        // The word arguments cannot be used as a variable:
+        "use strict";
+        let arguments = 3.14;    // This will cause an error
+
+
+        // The with statement is not allowed:
+        "use strict";
+        with (Math) { x = cos(2) }; // This will cause an error
+
+
+        // For security reasons, eval() is not allowed to create variables in the scope from which it was called:
+        "use strict";
+        eval("let x = 2");
+        alert(x);             // This will cause an error
+
+
+        // The this keyword in functions behaves differently in strict mode
+        "use strict";
+        function myFunction() {
+            alert(this); // will alert "undefined"
+        }
+        myFunction();
+
+        /* The "use strict" directive is only recognized at the beginning of a script or a function. */
+    </script>
+</body>
+
+</html>

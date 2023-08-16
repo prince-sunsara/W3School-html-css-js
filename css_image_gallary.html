@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image gallary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arima&family=Dancing+Script&family=Splash&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(241, 241, 240);
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin:40px 20px 0 20px;
+        }
+        .container .heading{
+            width: 50%;
+            padding-bottom: 20px;
+        }
+        .container .heading h2{
+            font-size: 3em;
+            font-weight: bolder;
+            border-bottom: 2px solid #222;
+            font-family: 'Arima', cursive;
+        }
+        .container .heading h2 span{
+            font-family: 'The Nautigal', cursive;
+            font-weight: 100;
+            color: fuchsia;
+        }
+        .container .all-In{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .container .all-In .images{
+            display: flex;
+            flex-direction: column;
+            width: 32.5%;
+        }
+        .container .all-In .images img{
+            width: 100%;
+            padding-bottom: 5px;
+            border-radius: 15px;
+        }
+        .container .btn{
+            background-color: #555;
+            padding: 8px 6px;
+            margin: 40px 0 70px 0;
+            border-radius: 12px;
+        }
+        .container .btn a{
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 1.2em;
+            font-weight: bolder;
+        }
+        .container .btn:hover{
+            background-color: grey;
+            width:12vw;
+        }
+        @media only screen and (max-width:770px) {
+            .container .all-In{
+                flex-direction: column;
+            }
+            .container .all-In .images{
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width:640px){
+            .container .heading{
+                width:100%; 
+            }
+            .container .heading h2{
+                font-size: 1em;
+            }
+        }
+
+        .nav ul{
+            position: sticky;
+            display: flex;
+            background-color:black;
+            list-style-type: none;
+            height: 45px;
+            align-items: center;
+        }
+        .nav ul li a{
+            color: aliceblue;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bolder;
+            font-size: 1.2em;
+        }
+        .nav ul li a:hover{
+            color: white;
+            background-color: #04aa6b;
+        }
+    </style>    
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#"> Home</a></li>
+            <li><a href="#"> About</a></li>
+            <li><a href="#"> Contact Us</a></li>
+            <li><a href="#"> Exit</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h2>Gallary By <span>@Unknown_._4ever</span></h2>
+        </div>
+        <div class="all-In">
+            <div class="images">
+                <img src="https://images.pexels.com/photos/4883890/pexels-photo-4883890.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <img src="https://images.pexels.com/photos/4132361/pexels-photo-4132361.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <img src="https://images.pexels.com/photos/7236513/pexels-photo-7236513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <img src="https://images.pexels.com/photos/4247817/pexels-photo-4247817.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <img src="https://images.pexels.com/photos/4759900/pexels-photo-4759900.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <img src="https://images.pexels.com/photos/9584933/pexels-photo-9584933.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <img src="https://images.pexels.com/photos/818593/pexels-photo-818593.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <img src="https://images.pexels.com/photos/1715507/pexels-photo-1715507.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/1445903/pexels-photo-1445903.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/3727658/pexels-photo-3727658.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+            </div>
+
+            <div class="images">
+                <img src="https://images.pexels.com/photos/1148572/pexels-photo-1148572.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <img src="https://images.pexels.com/photos/6788862/pexels-photo-6788862.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <img src="https://images.pexels.com/photos/2574672/pexels-photo-2574672.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/2106037/pexels-photo-2106037.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/70741/cereals-field-ripe-poppy-70741.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/3014941/pexels-photo-3014941.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/704748/pexels-photo-704748.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/1036844/pexels-photo-1036844.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/776636/pexels-photo-776636.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/4557758/pexels-photo-4557758.jpeg?auto=compress&cs=tinysrgb&w=600">
+            </div>
+
+            <div class="images">
+                <img src="https://images.pexels.com/photos/776764/pexels-photo-776764.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/887353/pexels-photo-887353.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/4557388/pexels-photo-4557388.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/3763583/pexels-photo-3763583.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/3723869/pexels-photo-3723869.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/3738057/pexels-photo-3738057.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/10183100/pexels-photo-10183100.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <img src="https://images.pexels.com/photos/2379179/pexels-photo-2379179.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/556662/pexels-photo-556662.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <img src="https://images.pexels.com/photos/11196964/pexels-photo-11196964.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+            </div>
+        </div>
+        <div class="btn">
+            <a href="https://www.pexels.com/search/love/" target="_blank">More Images</a>
+        </div>
+    </div>
+</body>
+</html>

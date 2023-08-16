@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floats examples</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 33.33%;
+            height: 15em;
+            float: left;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.3em;
+            border-bottom: 2px solid black;
+        }
+
+        .main-fix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* equal boxes  */
+        .boxc{
+            width: 50%;
+            height: 14em;
+            border-bottom: 2px solid black;
+            float: left;
+            text-align: center;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            overflow: auto;
+        }
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* flexible container  */
+        .container{
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: blanchedalmond;
+            border-bottom: 2px solid black;
+        }
+        .container .boxf{
+            width: 50%;
+            text-align: center;
+            margin: 10px;
+            line-height: 10px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- grid boxes  -->
+    <h2>grid boxes</h2>
+    <p>Float boxes side by side: </p>
+
+    <div class="main-div">
+        <div class="box" style="background-color: #bbb;">
+            <h2>Box 1</h2>
+            <p>Some text inside the box</p>
+        </div>
+        <div class="box" style="background-color: #ccc;">
+            <h2>Box 2</h2>
+            <p>Some text inside the box</p>
+        </div>
+        <div class="box" style="background-color: #ddd;">
+            <h2>Box 3</h2>
+            <p>Some text inside the box</p>
+        </div>
+    </div>
+    
+    <!-- equals boxes  -->
+    <h2>Equal boxes </h2>
+    <div class="clearfix">
+        <div class="boxc" style="background-color: #bbb;">
+            <h2>box 1</h2>
+            <ul>
+                <p>Some text inside the box.</p>
+            </ul>
+        </div>
+        <div class="boxc" style="background-color: #ccc;">
+            <h2>box 2</h2>
+            <ul>
+                <p>Some text inside the box.</p>
+                <p>Some text inside the box.</p>
+                <p>Some text inside the box.</p>
+            </ul>
+        </div>
+    </div>
+
+    <!-- flexible boxes  -->
+    <h2>Flexible boxes</h2>
+    <div class="container">
+        <div class="boxf" style="background-color: pink;">
+            <h3>Box 1</h3>
+            <p>some text inside box.</p>
+        </div>
+        <div class="boxf" style="background-color:aquamarine;">
+            <h3>Box 2</h3>
+            <p>some text inside box.</p>
+            <p>some text inside box.</p>
+            <p>some text inside box.</p>
+        </div>
+    </div>
+</body>
+
+</html>

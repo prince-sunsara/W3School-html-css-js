@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display property - inline, block, inline-block</title>
+    <style>
+        span{
+            height: 100px;
+            width: 100px;
+            padding: 5px;
+            border: 1px solid red;
+            background-color: pink;
+        }
+        .a{
+            display: inline;            
+        }
+        .b{
+            display:inline-block;            
+        }
+        .c{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <h1>The display property</h1>
+
+    <h2>display:inline</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt esse, doloremque deleniti assumenda accusantium sapiente maxime, <span class="a">laboriosam</span>  <span class="a"> aut</span> dolore architecto commodi asperiores at placeat?</p>
+
+    <h2>display:inline-block</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt esse, doloremque deleniti assumenda accusantium sapiente maxime, <span class="b"> laboriosam</span> <span class="b"> aut</span> dolore architecto commodi asperiores at placeat?</p>
+
+    <h2>display:block</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt esse, doloremque deleniti assumenda accusantium sapiente maxime, <span class="c"> laboriosam</span> <span class="c"> aut</span> dolore architecto commodi asperiores at placeat?</p>    
+
+</body>
+</html>

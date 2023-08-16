@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <button onclick="this.style.display='none'">click me!</button>
+
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+
+        /* this in method */
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        // document.getElementById("demo").innerHTML = person.fullName();
+
+        /* this alone */
+        // let x = this;
+        // document.getElementById("demo").innerHTML = x;
+
+        /* this in function */
+        // document.getElementById("demo").innerHTML = myFun();
+        // function myFun(){
+        //     return this;
+        // }
+
+        /* this in a Function (Strict) */
+        // "use strict";
+        // document.getElementById("demo").innerHTML = myFunction();
+        // function myFunction() {
+            //     return this;
+        // }
+        
+        /* Explicit Function Binding */
+        const per1 = {
+            fullName : function() {
+                return this.fname + " " + this.lname;
+            }
+        }
+        const per2 = {
+            fname : "Prince",
+            lname : "Sunsara",
+        }
+        // let x = per1.fullName.apply(per2);
+        let x = per1.fullName.call(per2);
+        document.getElementById("demo").innerHTML = x;
+        
+        /* Function Borrowing */
+        const person1 = {
+            fname : "Ram",
+            lname : "Ravan",
+            fullName : function() {
+                return this.fname + " " + this.lname;
+            }
+        }
+        const person2 = {
+            fname : "Prince",
+            lname : "Sunsara",
+        }
+        let xx = person1.fullName.bind(person2);
+        document.getElementById("demo").innerHTML = xx();
+    </script>
+</body>
+
+</html>

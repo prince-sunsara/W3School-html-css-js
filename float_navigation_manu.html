@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation manu using Floats</title>
+    <style>
+        /* for navigation bar using floats  */
+        /* body {
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+            background-image: url('https://i.pinimg.com/originals/9b/a1/ee/9ba1ee075815471a827b3abe98ca13d9.jpg');
+            background-repeat: no-repeat;
+            background-size: 1550px 760px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            background-color: #333;
+        }
+
+        li {
+            float: right;
+        }
+
+        .tt {
+            float: left;
+            margin: 10px;
+        }
+
+        .tt div {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            border-radius: 3rem;
+            height: 40px;
+            width: 40px;
+        }
+        span{
+            margin-left: 10px;
+            color:aliceblue;
+        }
+
+        li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        li a:hover {
+            background-color: rgb(48, 41, 41);
+            color: rgb(140, 220, 193);
+        } */
+
+        /* for hole content using floats  */
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+        .header,.footer {
+            display: flex;
+            background-color: cadetblue;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.5em;
+            height: 2rem;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .header{
+            height: 4.5rem;
+        }
+
+        .columns {
+            float: left;
+            text-align: center;
+            padding: 10px;
+            width: 25%;
+        }
+
+        .columns-box::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .columns ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            border-radius: 12px;
+        }
+
+        .columns li{
+            list-style-type: none;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border: 2px solid gray;
+            background-color:rgb(194, 194, 169);
+        }
+
+        li:hover {
+            background-color:rgb(148, 148, 134);
+            font-size: 1.5em;
+        }
+
+        .culumn-content {
+            width: 75%;
+        }
+
+        .map {
+            float: right;
+        }
+
+        .about-list li {
+            margin-bottom: 10px;
+            margin-left: 0;
+            background-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navigation manu using floats  -->
+    <!-- <div>
+
+    </div>
+    <ul>
+        <li class="tt">
+            <div>
+                <img src="sabo.jpg" alt=""> <span> Welcome, May i help you ?
+                </span>
+            </div>
+        </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">About</a></li>
+    </ul> -->
+
+    <!-- whole content using floats  -->
+    <div class="header">
+        <h1>India</h1>
+    </div>
+    <div class="columns-box">
+        <div class="columns">
+            <ul>
+                <li>Capital</li>
+                <li>Population</li>
+                <li>Area</li>
+                <li>Official names</li>
+            </ul>
+        </div>
+        <div class="culumn-content">
+            <h1>India</h1>
+            <p>An India is a famous country for its great culture and traditional values all across the world. Lorem
+                ipsum dolor sit amet consectetur, adipisicing elit. Cumque eos magni voluptatibus animi iusto error,
+                praesentium, fugiat placeat voluptatum nulla voluptatem earum quos quod repellat suscipit incidunt,
+                deserunt perferendis? Aliquid, voluptatibus error illo distinctio explicabo perspiciatis, non quam
+                adipisci dolorum id harum ullam eaque </p>
+            <p style="background-color:beige;display:inline-block">It contains mountains and surrounded by three occean.
+            </p>
+        </div>
+    </div>
+    <div class="about">
+        <h1 style="background-color:rgb(187, 117, 252);margin-top:0;text-align: center;">About india </h1>
+        <div class="map">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.zGTx-Mw4BcFROciVFtJtagHaJk&pid=Api&P=0&w=422&h=1024" alt="">
+        </div>
+        <div class="map-content">
+            <p>
+                Last updated on April 13th, 2022 <br><br>
+
+                India, officially the Republic of India, is the 2nd most populous country in the world, after China.
+                India has a total area of 3,287,263 sq km. It is a country in South Asia and has 28 states. The
+                country’s capital state is New Delhi. India has eight union territories. Its official language is Hindi.
+                It does not have any national language. The nationals or citizens of India are called Indians. <br>
+
+                The Indian currency is known as the Indian Rupee (INR). It has seven land bordering countries that are
+                Pakistan, Afghanistan, China, Nepal, Bhutan, Bangladesh, and Myanmar. It shares maritime border with Sri
+                Lanka, Thailand, Maldives and Indonesia. Let us learn about its history, geography, culture, flag,
+                famous people, agriculture, notable inventions, and much more.
+            </p> <br>
+            <div class="notes">
+                
+                <ol type="1" class="about-list">
+                    <li>
+                        <h3>What is in name</h3>
+                        The name ‘India’ is derived from the river Indus. It is a valley around which people settled in
+                        earlier
+                        times.
+                    </li>
+                    <li>
+                        <h3>Its civilization</h3>
+                        India is the world’s oldest, largest and continuous civilization – the Indus Valley
+                        civilization.
+                    </li>
+                    <li>
+                        <h3>Largest democracies</h3>
+                        India is also one of the largest democracies in the world.
+                    </li>
+                    <li>
+                        <h3>World’s most active mosques</h3>
+                        India has more than 300,000 active mosques. This outnumbers any other country in the world, even
+                        the Muslim
+                        countries.
+                    </li>
+                    <li>
+                        <h3>World’s largest Hindu population</h3>
+                        India has the world’s largest Hindu population. Nearly 81% of its population identifies itself
+                        as Hindu.
+                        India is one of the three countries (other are Nepal and Mauritius) in the world where Hinduism
+                        is the
+                        majority.
+                    </li>
+                    <li>
+                        <h3>World’s largest postal system</h3>
+                        India has the largest postal system in the world with more than 150,000 post offices, which is
+                        thrice the
+                        size of that of China. India has the world’s only floating post office on Dal Lake, Sri Nagar.
+                        The office
+                        provides all regular postal services.
+                    </li>
+                    <li>
+                        <h3>Largest pool of engineers</h3>
+                        The second largest pool of engineers and scientists is from India.
+                    </li>
+                    <li>
+                        <h3>An 80 year old sharp shooter!</h3>
+                        10. Did you know that a sharp shooter from India who is more than 80 years old; and who started
+                        her shooting
+                        career in her late sixties is the oldest (woman) sharp shooter in the world? Chandro Tomar known
+                        as “Shooter
+                        Dadi” was born in Shamli, Uttar Pradesh, India. To date she has won more than 25 national
+                        championships and
+                        counting. She has won gold at the Veteran Shooting Championship held in Chennai. Her top honour
+                        is a
+                        national bronze.Interestingly, she began shooting by chance when she took her granddaughter to a
+                        nearby rifle club.
+                        Apart from her shooting skills, she also looks after her big family and does regular household
+                        chores. She also
+                        maintains a Twitter account.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Thank you for coming.</p>
+    </div>
+</body>
+
+</html>

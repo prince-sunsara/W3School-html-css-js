@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Dates</title>
+    </head>
+    <body>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+
+        <script>
+            /* 4 ways to create date */
+
+            const a = new Date();
+            document.getElementById('demo1').innerHTML = a;
+
+            // const b = new Date(2002,3,25,17,30,56,0);
+            // const b = new Date(2002,3,25,17,30,56);
+            // const b = new Date(2002,3,25,17,30);
+            // const b = new Date(2002,3,25,17);
+            // const b = new Date(2002,3,25);
+            // const b = new Date(2002,3);
+            // const b = new Date(2002);
+            const b = new Date(99,3,25,17,30,56,0);
+            document.getElementById('demo2').innerHTML = b;
+
+            const c = new Date("April 25,2002 17:33:56");
+            document.getElementById('demo3').innerHTML = c;
+
+
+            // const d = new Date(0);
+            const d = new Date(10000000000000);
+            document.getElementById('demo4').innerHTML = d;
+            
+            /* Displaying Date */
+            const e = new Date();            
+            // document.getElementById('demo5').innerHTML = e.toString();
+            document.getElementById('demo5').innerHTML = e.toUTCString();
+            // document.getElementById('demo5').innerHTML = e.toDateString();
+            // document.getElementById('demo5').innerHTML = e.toISOString();
+            
+            /* Date get method */
+            const f = new Date();
+            // document.getElementById('demo6').innerHTML = f.getFullYear();
+            // document.getElementById('demo6').innerHTML = f.getMonth();
+            // document.getElementById('demo6').innerHTML = f.getDate();
+            // document.getElementById('demo6').innerHTML = f.getHours();
+            // document.getElementById('demo6').innerHTML = f.getMinutes();
+            // document.getElementById('demo6').innerHTML = f.getSeconds();
+            // document.getElementById('demo6').innerHTML = f.getMilliseconds();
+            // document.getElementById('demo6').innerHTML = f.getTime();
+            // document.getElementById('demo6').innerHTML = f.getDay();
+            const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            let day = days[f.getDay()];
+            document.getElementById('demo6').innerHTML = day;
+            
+            /* Date get method */
+            const g = new Date();
+            // g.setFullYear(2002);
+            // g.setMonth(11);
+            // g.setDate(25);
+            // g.setHours(3);
+            // g.setMinutes(12);
+            // g.setSeconds(55);
+            // g.setMilliseconds(142);       
+            // g.setTime(1000000000000); 
+            document.getElementById('demo7').innerHTML = g;
+            
+            /* compare two dates */
+            let text = "";
+            const today = new Date();
+            const someday = new Date();
+            someday.setFullYear(2023,08,01);
+            if(someday>today){
+                text = "Today is before 01-08-2023";
+            }
+            else{
+                text = "Today is after 01-08-2023";
+            }
+            document.getElementById('demo8').innerHTML = text;
+            </script>
+    </body>
+</html>

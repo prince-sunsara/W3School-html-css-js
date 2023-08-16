@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        const x = ["banana", "xerox", "apple", "prince"];
+        /* let text = "<ul>";
+            for(let i=0;i<x.length;i++){
+                text += "<li>" + x[i] + "</li>";
+            }
+            text += "</ul>";
+            document.getElementById("demo").innerHTML = text; */
+
+        // forEach
+        let text = "<ul>";
+        x.forEach(myfun);
+        text += "</ul>";
+
+        function myfun(value) {
+            text += "<li>" + value + "</value>";
+        }
+        document.getElementById("demo").innerHTML = text;
+
+        // add new element
+        x.push("Anamika");
+        document.getElementById("demo").innerHTML = x;
+
+        // sorting 
+        const points = [10, 5, 8, 40, 60, 11, 1];
+        points.sort(
+            function (a, b) {
+                return a - b
+            }
+        );
+        console.log(points);
+
+        // find max
+        function myMax(arr) {
+            let l = arr.length;
+            let m = -Infinity;
+            while (l--) {
+                if (arr[l] > m) {
+                    m = arr[l];
+                }
+            }
+            return m;
+        }
+        console.log(myMax(points));
+
+        // find min
+        function myMin(arr) {
+            let l = arr.length;
+            let m = Infinity;
+            while (l--) {
+                if (arr[l] < m) {
+                    m = arr[l];
+                }
+            }
+            return m;
+        }
+        console.log(myMin(points));
+
+        // sorting array
+        const cars = [
+            { type: "Volvo", year: 2016 },
+            { type: "Saab", year: 2001 },
+            { type: "BMW", year: 2010 }
+        ];
+        cars.sort(function(a,b){ return a.year - b.year});
+        console.log(cars.sort());
+
+        // forEach()
+        let numbers = [45,4,9,16,25];
+        let txt = "";
+        numbers.forEach(myFun);
+        document.getElementById("demo").innerHTML = txt;
+        function myFun(value,index,array){
+            // txt += index + "<br>";
+            // txt += array + "<br>";
+            txt += value + "<br>";
+        }
+
+        // map()
+        const num2 = numbers.map(myFun);
+        function myFun(value,index,array){
+            return value *2;
+        }
+        document.getElementById("demo").innerHTML = num2;
+        
+        // Array filter()
+        const over18 = numbers.filter(myFun);
+        function myFun(value,index,array){
+            return value > 18;
+        }
+        document.getElementById("demo").innerHTML = over18;
+        
+        // reduce() or reduceRight()
+        // let sum = numbers.reduce(myFun);
+        let sum = numbers.reduceRight(myFun);
+        function myFun(total,value){
+            return total+value;
+        }
+        document.getElementById("demo").innerHTML = sum;
+        
+        // Array every() 
+        let allOver18 = numbers.every(myFun);
+        function myFun(value){
+            return value>18;
+        }
+        document.getElementById("demo").innerHTML = allOver18;
+
+        // Array some()
+        let someOver18 = numbers.some(myFun);
+        function myFun(value){
+            return value>18;
+        }
+        document.getElementById("demo").innerHTML = someOver18;
+        
+        // indexof() --> returns -1 if the item is not found.
+        let number = [45,4,9,16,25,16];
+        let position = number.indexOf(16);
+        let last_position = number.lastIndexOf(16);
+        console.log(position); // aagl thi je pellu hse e
+        console.log(last_position); // aagl thi je chhelu hse e
+        
+        // find()
+        let first = numbers.find(myFun);
+        function myFun(value){
+            return value > 18;
+        }
+        document.getElementById("demo").innerHTML = first;
+        
+        // findindex()
+        let first_index = numbers.findIndex(myFun);
+        function myFun(value){
+            return value > 18;
+        }
+        document.getElementById("demo").innerHTML = first_index;
+        
+        // Array.from()
+        const arr = Array.from("ABCDEFG");
+        document.getElementById("demo").innerHTML = arr;
+        
+        // Array.keys()
+        const keys = numbers.keys(); 
+        for(let x of keys){
+            text += x + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+
+        // Array.entries()
+        const f = numbers.entries();
+        for(let x of f){
+            document.getElementById("demo").innerHTML += x + "<br>";
+        }
+
+        // includes()
+        console.log(numbers.includes(45))
+        console.log(numbers.includes(44))
+        </script>
+</body>
+
+</html>

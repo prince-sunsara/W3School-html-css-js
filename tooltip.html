@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .tooltip{
+            top: 200px;
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+        .tooltip .tooltiptext{
+            visibility: hidden;
+            width: 100px;
+            text-align:center;
+            padding: 5px 0;
+            background-color: black;
+            color: aliceblue;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+
+            /*  animation effect */
+            opacity: 0;
+            transition: opacity 7s;
+
+            /* left side  */
+            /* left: 70px;
+            top: -3px; */
+
+            /* right side  */
+            top: -5px;
+            right: 110%;
+
+            /* top side  */
+            /* bottom: 100%;
+            left: -25%; */
+
+            /* bottom side  */
+            /* top: 125%;
+            left: -25%; */
+            
+        }
+        
+        /* tooltip arrow  */
+        .tooltip .tooltiptext::after{
+            content: "";
+            position: absolute;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            
+            /* arrow for top side tooltip  */
+            /* border-color: black transparent transparent transparent;
+            top: 100%;
+            left: 50%; */
+            
+            /* arrow for bottom side tooltip  */
+            /* border-color: transparent transparent black transparent;
+            bottom: 100%;
+            left: 50%; */
+            
+            /* arrow for left side tooltip  */
+            /* border-color: transparent black transparent transparent;
+            top: 10px;
+            right: 100%; */
+            
+            /* arrow for right side tooltip  */
+            border-color: transparent transparent transparent black;
+            left: 105%;
+            top: 9px;
+        }
+        
+        .tooltip:hover .tooltiptext{
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="tooltip">Hover me <span class="tooltiptext">some texts</span></div>
+</body>
+</html>

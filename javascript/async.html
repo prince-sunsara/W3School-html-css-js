@@ -1,0 +1,45 @@
+<html>
+<title>Async</title>
+
+<body>
+    <p id="demo"></p>
+    <h1 id="demo2"></h1>
+    <script>
+        /* function sequence */
+        function display(x) {
+            document.getElementById("demo").innerHTML = x;
+        }
+        function f1() {
+            display("Good Morning!!");
+        }
+        function f2() {
+            display("Good Evening!!");
+        }
+        // last called function displayed
+        f1();
+        f2();
+
+        /* Asynchronous function */
+        /* setTimeout() */
+        function myFun() {
+            document.getElementById("demo2").innerHTML = "You know, I Love You!";
+        }setTimeout(myFun, 3000);
+
+        function myFun(value) {
+            document.getElementById("demo2").innerHTML = value;
+        }
+        setTimeout(function () {
+            myFun("Prince Sunsara...");
+        }, 3000);
+
+
+        /* setInterval() */
+        function time() {
+            let d = new Date();
+            document.getElementById("demo2").innerHTML = "Time :- " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds(); 
+        }
+        setInterval(time, 1000);
+    </script>
+</body>
+
+</html>

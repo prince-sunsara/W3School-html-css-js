@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        /* basic dropdown  */
+        /* .dropdown{
+            position: relative;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: rgb(247, 241, 233);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            padding: 8px 10px;
+            z-index: 1;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        } */
+
+        /* Dropdown Menu  */
+        .dropbtn{
+            background-color: gray;
+            color: rgb(236, 21, 21);
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            display:none;
+            position: absolute;
+            background-color: beige;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a{
+            color: black;
+            padding:12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover{
+            background-color: aqua;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        .dropdown:hover .dropbtn{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- basic dropdown  -->
+    <!-- <div class="dropdown">
+        <button>Click me!</button>
+        <div class="dropdown-content">
+            <p>Prince Sunasara</p>
+        </div>
+    </div> -->
+
+    <!-- Dropdown Menu  -->
+    <div class="dropdown">
+        <button class="dropbtn">Download</button>
+        <div class="dropdown-content">
+            <a href="#">Server 1</a>
+            <a href="#">Server 2</a>
+            <a href="#">Server 3</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var() function in html/css</title>
+    <style>
+        :root{
+            --blue:#1e90ff;
+            --white:#ffffff;
+        }
+        body{
+            background-color: var(--blue);
+        }
+        .container{
+            --fontsize:25px;
+            color: var(--blue);
+            background-color: var(--white);
+            padding: 20px 16px;
+            font-size: var(--fontsize);
+        }
+        .container h2{
+            /* border-bottom: 2px solid var(--blue); */
+
+            /* override the global variable with local variable */
+            --blue:green;
+            border-bottom: 2px solid var(--blue);
+        }
+        .container p button{
+            border: 1px solid var(--blue);
+            color: var(--blue);
+            font-size: 14px;
+            padding: 4px 6px;
+
+            /* add new local variable (override global variable) */
+            --button-blue:green;
+            border: 2px solid var(--button-blue);
+        }
+
+        /* change valiable value using media queries  */
+        @media only screen and (min-width:400px){
+            :root{
+                --blue:black;
+            }
+            .container{
+                --fontsize:50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Using the var() function</h1>
+    <div class="container">
+        <h2>Form Fill Up</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt exercitationem error cupiditate eos voluptatem alias modi.</p>
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt exercitationem error cupiditate eos voluptatem alias modi.</span></p>
+        <p>
+            <button>Yes</button>
+            <button>No</button>
+        </p>
+    </div>
+
+    <!-- change the value of variable using javascript  -->
+    <br>
+    <button type="button" onclick="myGet()">myGet</button>
+    <button type="button" onclick="mySet()">mySet</button>
+    <script>
+        // get root element 
+        let r = document.querySelector(':root');
+
+        // function that get variable value 
+        function myGet(){
+            let rs = getComputedStyle(r);
+            alert("The value of --blue is "+rs.getPropertyValue('--blue'));
+        }
+
+        // function that set the variable value 
+        function mySet(){
+            r.style.setProperty('--blue', 'red');
+        }
+    </script>
+</body>
+</html>
